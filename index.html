@@ -1,0 +1,139 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EventHub - Event Management</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .hero {
+      background: url('https://images.unsplash.com/photo-1529634899534-1e90d80b8cbe?auto=format&fit=crop&w=1500&q=80') 
+                  no-repeat center center/cover;
+      height: 90vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    }
+    .hero p {
+      font-size: 1.2rem;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+    }
+    .services .card {
+      transition: transform 0.3s;
+    }
+    .services .card:hover {
+      transform: scale(1.05);
+    }
+    footer {
+      background: #222;
+      color: #bbb;
+      padding: 20px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">EventHub</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav" aria-controls="navbarNav" 
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <h1>We Make Your Events Memorable</h1>
+    <p>Wedding • Corporate • Birthday • Concerts • Festivals</p>
+    <a href="services.html" class="btn btn-warning btn-lg mt-3">Explore Services</a>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="py-5">
+  <div class="container text-center">
+    <h2 class="mb-4">About Us</h2>
+    <p class="lead">At <strong>EventHub</strong>, we specialize in turning your dreams into reality. From weddings to corporate functions, 
+    our team ensures every detail is perfectly planned and executed.</p>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="services py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">Our Services</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card shadow h-100">
+          <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Wedding">
+          <div class="card-body text-center">
+            <h5 class="card-title">Wedding Planning</h5>
+            <p class="card-text">From venue selection to decoration, we create magical weddings tailored to your dreams.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4">
+        <div class="card shadow h-100">
+          <img src="https://images.unsplash.com/photo-1515168833906-d2a3b82b302a?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Corporate">
+          <div class="card-body text-center">
+            <h5 class="card-title">Corporate Events</h5>
+            <p class="card-text">Professional and elegant event solutions for business meetings, launches, and seminars.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4">
+        <div class="card shadow h-100">
+          <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Birthday">
+          <div class="card-body text-center">
+            <h5 class="card-title">Birthday Parties</h5>
+            <p class="card-text">Fun-filled birthday parties with customized themes, cakes, and entertainment for all ages.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 EventHub | All Rights Reserved</p>
+  <p>
+    <a href="#" class="text-light me-3">Facebook</a>
+    <a href="#" class="text-light me-3">Instagram</a>
+    <a href="#" class="text-light">Twitter</a>
+  </p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+</body>
+</html>
