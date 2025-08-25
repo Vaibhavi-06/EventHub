@@ -53,13 +53,15 @@
     }
 
     .text-box {
-      background-color: rgb(42, 32, 52);
+      background-color: #bf9d7f;  /* rgb(42,32,52)  dark beige #a58d5d,,#B6855A,,,,#bf9d7f*/
     }
 
     .text {
-      color: #fee9a8;
+      color: #302913;
       /* color: #540202;*/
-      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-family:'Times New Roman', Times, serif;
+      font-size: 30px;
+     word-spacing: 5px;
 
     }
 
@@ -84,8 +86,26 @@
     }
 
     .lead {
-      color: #f7eccb;
+      color: #302913;
+      font-size: 40px;
+      font-family:cursive;
     }
+    /*Heading animation*/
+      .lead-h2{
+        animation: fadeSlideIn 2s ease-in-out forwards;
+  opacity: 0;
+      }
+      @keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
     .bi-plus{
       color: rgb(42, 32, 52);
      /*background-color: #f7eccb;*/
@@ -120,9 +140,11 @@
       border-radius: 10px;
     }
     .card:hover{
-      box-shadow: 0 0 20px 0px palegoldenrod;
-      transform: scale(1);
-      
+      box-shadow: 0 8px 20px #4a3100;  /*0 0 20px 0px*/
+      transform: scale(1.05); 
+    }
+    .bi-balloon-fill{
+      color: red;
     }
     
   </style>
@@ -163,14 +185,13 @@
   <!-- Background text Section -->
   <section class="py-2 text-box">
     <div class="container text-center ">
-      <h2 class=" text mb-2">FIND THE PERFEC PLACE</h2>
-      <p class="lead ">We take pride in every aspect of our business, and that includes helping you choose the right
-        venue for you event.</p>
+      <h2 class=" text mb-2">FABULOUS  PLACE  TO  MAKE  UNFORGETABLE  MEMORIES</h2>
+      <p class="lead "><i class="bi bi-balloon-fill"></i>Birthday Celebration Collection&#127874;</p>
     </div>
 
     <!--Birthday Card Section-->
 
-    <section class="mt-3 ">
+    <section class="mt-5">
       <div class="container">
       <div class="row">
         <div class="col-md-3">
@@ -180,18 +201,12 @@
               <h5 class="card-title">Apple</h5>
               <p class="card-text">Apples are a healthy and delicious fruit.They come in various colors like red,
                   green, and yellow. Apples can be enjoyed fresh, juiced. </p>
-             
               <!--Button Section Start-->
-              <!--<button type="button"  data-bs-toggle="modal" data-bs-target="#Plu class="btn btn-info"     More Info...-->
-               <!--<i class="bi bi-plus-square-fill"></i>-->
                <i class="bi bi-plus" data-bs-toggle="modal" data-bs-target="#Plus"></i>
-            
               <!--Button Sectio End-->
             </div>
           </div>
         </div>
-
-    
 
           <div class="col-md-3">
             <div class="card " style="width: 18rem;">
@@ -201,7 +216,6 @@
                 <p class="card-text">Apples are a healthy and delicious fruit. They come in various colors like red,
                   green, and yellow. Apples can be enjoyed fresh, juiced. </p>
                    <i class="bi bi-plus" data-bs-toggle="modal" data-bs-target="#Plus"></i>
-                <!-- <a href="#" class="btn btn-primary">Go somewhere</a>-->
               </div>
             </div>
           </div>
@@ -214,7 +228,6 @@
                 <p class="card-text">Apples are a healthy and delicious fruit. They come in various colors like red,
                   green, and yellow. Apples can be enjoyed fresh, juiced. </p>
                    <i class="bi bi-plus" data-bs-toggle="modal" data-bs-target="#Plus"></i>
-                <!-- <a href="#" class="btn btn-primary">Go somewhere</a>-->
               </div>
             </div>
           </div>
@@ -227,13 +240,72 @@
                 <p class="card-text">Apples are a healthy and delicious fruit. They come in various colors like red,
                   green, and yellow. Apples can be enjoyed fresh, juiced. </p>
                    <i class="bi bi-plus" data-bs-toggle="modal" data-bs-target="#Plus"></i>
-                <!-- <a href="#" class="btn btn-primary">Go somewhere</a>-->
+              </div>
+            </div>
+          </div>
+            </section>
+
+          <!--Wedding Section Start-->
+
+           <section class="mt-3">
+          <div class="container mt-3 mb-3 text-center">
+            <h2 class="text mb-5">FIND THE PERFEC PLACE</h2>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card " style="width: 18rem;">
+            <img src="images/wed11.png" height="250px" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Apple</h5>
+              <p class="card-text">Apples are a healthy and delicious fruit.They come in various colors like red,
+                  green, and yellow. Apples can be enjoyed fresh, juiced. </p>
+              <!--Button Section Start-->
+               <i class="bi bi-plus" data-bs-toggle="modal" data-bs-target="#Plus"></i>
+              <!--Button Sectio End-->
+            </div>
+          </div>
+        </div>
+
+          <div class="col-md-3">
+            <div class="card " style="width: 18rem;">
+              <img src="images/bday6.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Apple</h5>
+                <p class="card-text">Apples are a healthy and delicious fruit. They come in various colors like red,
+                  green, and yellow. Apples can be enjoyed fresh, juiced. </p>
+                   <i class="bi bi-plus" data-bs-toggle="modal" data-bs-target="#Plus"></i>
               </div>
             </div>
           </div>
 
+          <div class="col-md-3">
+            <div class="card " style="width: 18rem;">
+              <img src="images/bday33.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Apple</h5>
+                <p class="card-text">Apples are a healthy and delicious fruit. They come in various colors like red,
+                  green, and yellow. Apples can be enjoyed fresh, juiced. </p>
+                   <i class="bi bi-plus" data-bs-toggle="modal" data-bs-target="#Plus"></i>
+              </div>
+            </div>
+          </div>
 
-    </section>
+          <div class="col-md-3">
+            <div class="card " style="width: 18rem;">
+              <img src="images/ultimate-happy-birthday-balloon-kit-diy-kit.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Apple</h5>
+                <p class="card-text">Apples are a healthy and delicious fruit. They come in various colors like red,
+                  green, and yellow. Apples can be enjoyed fresh, juiced. </p>
+                   <i class="bi bi-plus" data-bs-toggle="modal" data-bs-target="#Plus"></i>
+              </div>
+            </div>
+          </div>
+          </section>
+
+          <!--Wedding Section End-->
+
+
+  
 
     <!-- card Section -->
     <section class=" text-box mt-3 bg-light">
