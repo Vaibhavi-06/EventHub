@@ -133,6 +133,25 @@
       /*0 0 20px 0px*/
       transform: scale(1.05);
     }
+    /* image animation start*/
+    .card img:hover {
+  animation: pulse 0.8s ease-in-out;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+.card {
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.card:hover {
+  transform: translateY(-15px) scale(1.05); /* upar uth jayega aur thoda bada hoga */
+  box-shadow: 0px 15px 25px rgba(0,0,0,0.3);
+}
+  /* image animation end*/
     .bi-balloon-fill
      {
       color: red;
@@ -387,13 +406,13 @@
       <div class="modal-dialog modal-dialog-scrollable">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">    </h1>
+            <h1 class="modal-title fs-5" id="exampleModalLabel">     <i class="fa-solid fa-utensil-spoon"></i>Our Delicious Menu </h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <div class="container">
               <div class="row">
-                <div class=" col-md-12">
+                <div class=" col-md-6">
                   <img src="/images/menu1.jpg" class="img-fluid">
                 </div>
                 <div class="col-md-6">
