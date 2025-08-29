@@ -9,7 +9,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   <style>
-    .image {
+    .image
+     {
       background: linear-gradient(#00000047), url('/images/bg2.jpg');
       background-repeat: no-repeat;
       background-size: cover;
@@ -20,80 +21,77 @@
       justify-content: center;
       text-align: center;
     }
-
-    .image h1 {
+    .image h1
+     {
       font-size: 3rem;
       font-weight: bold;
       text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
     }
-
-    .image p {
+    .image p 
+    {
       font-size: 1.2rem;
       text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
     }
-
-    .card_sec {
+    .card_sec
+     {
       background-color: #624a02;
     }
 
-    .card_sec .card {
+    .card_sec .card 
+    {
       transition: transform 0.3s;
 
     }
-
-    .card_sec .card:hover {
+    .card_sec .card:hover 
+    {
       transform: scale(1.05);
     }
-
-    footer {
+    footer
+     {
       background: #222;
       color: #bbb;
       padding: 20px 0;
       text-align: center;
     }
-
-    .text-box {
+    .text-box
+     {
       background-color: #bf9d7f;
-      /* rgb(42,32,52)  dark beige #a58d5d,,#B6855A,,,,#bf9d7f*/
+      /* rgb(42,32,52)  dark beige #a58d5d,,,#B6855A,,,,#bf9d7f*/
     }
-
-    .text {
+    .text
+     {
       color: #302913;
       /* color: #540202;*/
-      font-family: 'Times New Roman', Times, serif;
+      font-family: 'Times New Roman', Times,serif;
       font-size: 30px;
       word-spacing: 5px;
-
     }
-
-    .card {
+    .card 
+    {
       background-color: #f7eccb;
 
     }
-
-    .card-title {
-
-      background-color: #f7eccb;
-      color: black;
+    .card-title 
+    {
+      background-color: #f7eccb;     
+      color: black;             
       /* color: #540202;*/
       font-family: Georgia, 'Times New Roman', Times, serif;
       font-size: 15px;
-
     }
-
-    .card-text {
-
+    .card-text 
+    {
       background-color: #f7eccb;
     }
-
-    .lead {
+    .lead 
+    {
       /* color: #302913;*/
       color: rgb(58, 2, 2);
       font-size: 40px;
       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
-
-    .bi-plus {
+    .bi-plus
+     {
       color: rgb(42, 32, 52);
       /*background-color: #f7eccb;*/
       font-size: 50px;
@@ -101,57 +99,79 @@
       position: absolute;
       left: 230px;
       bottom: 110px;
-
-
+      
+    
     }
-
-    .modal-content {
-      background-color: rgb(42, 32, 52);
+    .modal-content
+     {
+      background-color: #000000;
+      /* rgb(42,32,52)  dark beige #a58d5d,,,#B6855A;*/
     }
-
-    .modal-header {
-      background-color: #f7eccb;
+    .modal-header 
+    {
+      background-color: #302913;
     }
-
-    .modal-title {
-      color: rgb(42, 32, 52);
+    .modal-title
+     {
+      color:#f7eccb;
       font-family: Georgia, 'Times New Roman', Times, serif;
       text-align: center;
       font-size: 10px;
     }
-
-    .modal-footer {
-      background-color: #f7eccb;
+    .modal-footer 
+    {
+      background-color:  #302913;
     }
-
-    .cord {
+    .cord
+     {
       transition: 0.5s;
-      flex-basis: 30%;
+      flex-basis: 50%;
       cursor: pointer;
       box-sizing: border-box;
-      border-radius: 10px;
+      border-radius: 50px;
     }
-
-    .card:hover {
-      box-shadow: 0 8px 20px #4a3100;
+    .card:hover
+     {
+      box-shadow: 0 8px 20px brown;
       /*0 0 20px 0px*/
       transform: scale(1.05);
     }
+    /* image animation start*/
+    .card img:hover {
+  animation: pulse 0.8s ease-in-out;
+}
 
-    .bi-balloon-fill {
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+.card {
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.card:hover {
+  transform: translateY(-15px) scale(1.05); 
+  box-shadow: 0px 15px 25px #a58d5d;
+}
+  /* image animation end*/
+    .bi-balloon-fill
+     {
       color: red;
     }
-
-    .text {
+    .text 
+    {
       color: #3a2701;
       font-size: 40px;
       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
-
-    .text-wed {
+    .text-wed
+     {
       color: rgb(58, 2, 2);
       font-size: 40px;
       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }.modal-title {
+      color:white ;
     }
   </style>
 </head>
@@ -203,11 +223,11 @@
         <div class="row">
           <div class="col-md-3">
             <div class="card " style="width: 18rem;">
-              <img src="images/bday7.webp" class="card-img-top" alt="...">
+              <img src="images/bday7.webp" class="card-img-top" alt=" ">
               <div class="card-body">
-                <h5 class="card-title">Apple</h5>
-                <p class="card-text">Apples are a healthy and delicious fruit.They come in various colors like red,
-                  green, and yellow. Apples can be enjoyed fresh, juiced. </p>
+                <h5 class="card-title"><b>Golden Glow Balloon</b></h5>
+                <p class="card-text">“Celebrate in style with our Golden Glow Balloon Décor.A touch of elegance, a sparkle of joy,
+                        and a golden shine.” </p>
                 <!--Button Section Start-->
                 <i class="bi bi-plus" data-bs-toggle="modal" data-bs-target="#Plus"></i>
                 <!--Button Sectio End-->
@@ -217,11 +237,10 @@
 
           <div class="col-md-3">
             <div class="card " style="width: 18rem;">
-              <img src="images/bday6.webp" class="card-img-top" alt="...">
+              <img src="images/bday6.webp" class="card-img-top" alt=" ">
               <div class="card-body">
-                <h5 class="card-title">Apple</h5>
-                <p class="card-text">Apples are a healthy and delicious fruit. They come in various colors like red,
-                  green, and yellow. Apples can be enjoyed fresh, juiced. </p>
+                <h5 class="card-title"><b>Chocolate Brown Balloon</b></h5>
+                <p class="card-text">Elegant shades of chocolate brown,bringing sweetness and style together,for a birthday full of charm.</p>
                 <i class="bi bi-plus" data-bs-toggle="modal" data-bs-target="#Plus"></i>
               </div>
             </div>
@@ -229,11 +248,10 @@
 
           <div class="col-md-3">
             <div class="card " style="width: 18rem;">
-              <img src="images/bday33.webp" class="card-img-top" alt="...">
+              <img src="images/bday33.webp" class="card-img-top" alt=" ">
               <div class="card-body">
-                <h5 class="card-title">Apple</h5>
-                <p class="card-text">Apples are a healthy and delicious fruit. They come in various colors like red,
-                  green, and yellow. Apples can be enjoyed fresh, juiced. </p>
+                <h5 class="card-title"><b>Pink Strawberry</b></h5>
+                <p class="card-text">Blush pink and strawberry charm,adding sweetness to every corner,making your party bloom with joy. </p>
                 <i class="bi bi-plus" data-bs-toggle="modal" data-bs-target="#Plus"></i>
               </div>
             </div>
@@ -241,11 +259,10 @@
 
           <div class="col-md-3">
             <div class="card " style="width: 18rem;">
-              <img src="images/ultimate-happy-birthday-balloon-kit-diy-kit.webp" class="card-img-top" alt="...">
+              <img src="images/ultimate-happy-birthday-balloon-kit-diy-kit.webp" class="card-img-top" alt=" ">
               <div class="card-body">
-                <h5 class="card-title">Apple</h5>
-                <p class="card-text">Apples are a healthy and delicious fruit. They come in various colors like red,
-                  green, and yellow. Apples can be enjoyed fresh, juiced. </p>
+                <h5 class="card-title"><b>Royal Blue Birthda</b></h5>
+                <p class="card-text">Celebrate in shades of royal blue,a décor that feels bold and elegant,perfect for birthdays full of grandeur. </p>
                 <i class="bi bi-plus" data-bs-toggle="modal" data-bs-target="#Plus"></i>
               </div>
             </div>
@@ -260,11 +277,10 @@
         <div class="row">
           <div class="col-md-3">
             <div class="card " style="width: 18rem;">
-              <img src="images/Elegant .jpg" class="card-img-top" alt="...">
+              <img src="images/Elegant .jpg" class="card-img-top" alt=" ">
               <div class="card-body">
-                <h1 class="card-title">Elegant Venues</h1>
-                <p class="card-text">Apples are a healthy and delicious fruit.They come in various colors like red,
-                  green, and yellow. Apples can be enjoyed fresh, juiced. </p>
+                <h1 class="card-title"><b>Elegant Venues</b></h1>
+                <p class="card-text">  Elegant venues with graceful décor,blending luxury and beauty together,to create magical celebrations.</p>
                 <!--Button Section Start-->
                 <i class="bi bi-plus" data-bs-toggle="modal" data-bs-target="#Plus"></i>
                 <!--Button Sectio End-->
@@ -274,9 +290,20 @@
 
           <div class="col-md-3">
             <div class="card " style="width: 18rem;">
-              <img src="images/wed01.jpg" class="card-img-top" alt="...">
+              <img src="images/wed01.jpg" class="card-img-top" alt=" ">
               <div class="card-body">
-                <h1 class="card-title">Wedding Bliss</h1>
+                <h1 class="card-title"><b>Wedding Bliss</b></h1>
+                <p class="card-text">From vows to celebrations,our décor adds magic and warmth,making every moment truly blissful.</p>
+                <i class="bi bi-plus" data-bs-toggle="modal" data-bs-target="#Plus"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card " style="width: 18rem;">
+              <img src="images/wed1.66.jpg" class="card-img-top" alt=" ">
+              <div class="card-body">
+                <h1 class="card-title"><b>Classic Celebrations</b></h1>
                 <p class="card-text">Apples are a healthy and delicious fruit. They come in various colors like red,
                   green, and yellow. Apples can be enjoyed fresh, juiced. </p>
                 <i class="bi bi-plus" data-bs-toggle="modal" data-bs-target="#Plus"></i>
@@ -286,21 +313,9 @@
 
           <div class="col-md-3">
             <div class="card " style="width: 18rem;">
-              <img src="images/wed1.66.jpg" class="card-img-top" alt="...">
+              <img src="images/wed6.6.jpg" class="card-img-top" alt=" ">
               <div class="card-body">
-                <h1 class="card-title">Classic Celebrations</h1>
-                <p class="card-text">Apples are a healthy and delicious fruit. They come in various colors like red,
-                  green, and yellow. Apples can be enjoyed fresh, juiced. </p>
-                <i class="bi bi-plus" data-bs-toggle="modal" data-bs-target="#Plus"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-3">
-            <div class="card " style="width: 18rem;">
-              <img src="images/wed6.6.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h1 class="card-title">Grand Gatherings</h1>
+                <h1 class="card-title"><b>Grand Gatherings</b></h1>
                 <p class="card-text">Apples are a healthy and delicious fruit. They come in various colors like red,
                   green, and yellow. Apples can be enjoyed fresh, juiced. </p>
                 <i class="bi bi-plus" data-bs-toggle="modal" data-bs-target="#Plus"></i>
@@ -319,11 +334,10 @@
         <div class="row">
           <div class="col-md-3">
             <div class="card " style="width: 18rem;">
-              <img src="images/c1.webp" class="card-img-top" alt="...">
+              <img src="images/c77.jpg" class="card-img-top" alt=" ">
               <div class="card-body">
-                <h1 class="card-title">Elegant Venues</h1>
-                <p class="card-text">Apples are a healthy and delicious fruit.They come in various colors like red,
-                  green, and yellow. Apples can be enjoyed fresh, juiced. </p>
+                <h1 class="card-title"><b> Executive Excellence </b></h1>
+                <p class="card-text"> Crafted décor for professional charm,designed to elevate every corporate meet,with elegance and sophistication.</p>
                 <!--Button Section Start-->
                 <i class="bi bi-plus" data-bs-toggle="modal" data-bs-target="#Plus"></i>
                 <!--Button Sectio End-->
@@ -333,11 +347,10 @@
 
           <div class="col-md-3">
             <div class="card " style="width: 18rem;">
-              <img src="images/c2.jpg" class="card-img-top" alt="...">
+              <img src="images/c.33.jpg" class="card-img-top" alt=" ">
               <div class="card-body">
-                <h1 class="card-title">Wedding Bliss</h1>
-                <p class="card-text">Apples are a healthy and delicious fruit. They come in various colors like red,
-                  green, and yellow. Apples can be enjoyed fresh, juiced. </p>
+                <h1 class="card-title"><b> Boardroom Brilliance </b></h1>
+                <p class="card-text"> Where great ideas take shape,in an ambiance of refined décor,setting the tone for success,and impactful corporate moments.</p>
                 <i class="bi bi-plus" data-bs-toggle="modal" data-bs-target="#Plus"></i>
               </div>
             </div>
@@ -345,11 +358,10 @@
 
           <div class="col-md-3">
             <div class="card " style="width: 18rem;">
-              <img src="images/c3.webp" class="card-img-top" alt="...">
+              <img src="images/c.22.jpg" class="card-img-top" alt=" ">
               <div class="card-body">
-                <h1 class="card-title">Classic Celebrations</h1>
-                <p class="card-text">Apples are a healthy and delicious fruit. They come in various colors like red,
-                  green, and yellow. Apples can be enjoyed fresh, juiced. </p>
+                <h1 class="card-title"><b> Conference Elegance  </b></h1>
+                <p class="card-text"> Designed for focus and vision,our décor enhances every event,from meetings to milestones,with style that leaves a mark.</p>
                 <i class="bi bi-plus" data-bs-toggle="modal" data-bs-target="#Plus"></i>
               </div>
             </div>
@@ -357,11 +369,10 @@
 
           <div class="col-md-3">
             <div class="card " style="width: 18rem;">
-              <img src="images/c4.jpg" class="card-img-top" alt="...">
+              <img src="images/c11.jpg" class="card-img-top" alt=" ">
               <div class="card-body">
-                <h1 class="card-title">Grand Gatherings</h1>
-                <p class="card-text">Apples are a healthy and delicious fruit. They come in various colors like red,
-                  green, and yellow. Apples can be enjoyed fresh, juiced. </p>
+                <h1 class="card-title"><b> Corporate Grandeur </b></h1>
+                <p class="card-text">  Grandeur that speaks of success,with décor blending class and purpose,making gatherings truly memorable,and celebrating.</p>
                 <i class="bi bi-plus" data-bs-toggle="modal" data-bs-target="#Plus"></i>
               </div>
             </div>
@@ -383,28 +394,28 @@
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Launch demo modal-->
     </button>
+  
+
 
     <!-- Modal -->
     <div class="modal fade" id="Plus" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-scrollable">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel"> gfghfghv</h1>
+            <h1 class="modal-title fs-5" id="exampleModalLabel"> Our Delicious Menu</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <div class="container">
               <div class="row">
-                <div class=" col-md-12">
+                <div class=" col-md-6">
                   <img src="/images/menu1.jpg" class="img-fluid">
                 </div>
-
                 <div class="col-md-6">
-                  <p> </p>
+                  <p> Soft paneer cubes in creamy tomato gravy with butter.  </p>
                 </div>
               </div>
             </div>
-
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -413,9 +424,11 @@
         </div>
       </div>
     </div>
-
     <!--Modal Mode End-->
+  
 
+
+      
     <!-- Footer -->
     <footer>
       <p>&copy; 2025 EventHub | All Rights Reserved</p>
