@@ -31,7 +31,7 @@
     .card1 {
       background-color: #f7eccb;
       text-align: center;
-     
+
 
     }
 
@@ -47,22 +47,24 @@
       transition: transform 0.5s ease, box-shadow 0.5s ease;
       cursor: pointer;
       border-radius: 10px;
+      
       /* optional */
     }
 
     .hover-image:hover {
       transform: scale(1.05);
-}
+    }
 
 
 
     .containe-fluid1 {
       animation: fadeIn 2s ease-in-out;
     }
-    .value-poin-sec{
+
+    .value-poin-sec {
       text-align: center;
-       
-     
+
+
     }
 
 
@@ -73,16 +75,16 @@
       /* Larger font for headings */
       color: #4b1e0d;
       /* Darker purple for the title */
-      
-   }
+
+    }
 
     /* For smaller text or taglines */
     .about-subtext {
       margin-top: 10px;
       word-spacing: normal;
       font: size 17px;
-     
-    
+
+
     }
 
     .zoom-pulse {
@@ -100,6 +102,7 @@
         transform: scale(1.05);
       }
     }
+
     .hover-card4 {
       transition: transform 0.5s ease, box-shadow 0.5s ease;
       cursor: pointer;
@@ -111,33 +114,51 @@
       transform: scale(1.05);
 
     }
+
     .bi-check-square-fill {
-  color: #4b1e0d; /* Change this to your desired color */
-  font-weight: bold;
-}
-.image-center{
-display: flex;
-  justify-content: center;
-  margin-bottom: 30px;
-}
-.text-box {
-  font-size: 18px;
-  color: #333;
-  line-height: 1.5;
-  display: inline-block;
-  animation: zoomInOut 3s ease-in-out infinite, scrollText 10s linear infinite;
-}
+      color: #4b1e0d;
+      /* Change this to your desired color */
+      font-weight: bold;
+    }
+
+    .image-center {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .text-box {
+      font-size: 18px;
+      color: #333;
+      line-height: 1.5;
+      display: inline-block;
+      animation: zoomInOut 3s ease-in-out infinite, scrollText 10s linear infinite;
+    }
 
 
-@keyframes scrollText {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
+    @keyframes scrollText {
+      0% {
+        transform: translateX(100%);
+      }
 
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+    .image {
+      background: linear-gradient(#00000047), url('/images/bg3.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 700px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+   
+
+   
   </style>
 </head>
 
@@ -165,24 +186,14 @@ display: flex;
   </nav>
 
   <MAIN>
-    <section>
-      <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="images/Bride back image1.jpeg" class="d-block w-100"
-              alt="wdding.img">
-            
-              <!--background text section-->
-               <div class="carousel-caption d-none d-md-block">
-                <div class="containe text-center">
-        <h1><a href="gallery.html" class="btn btn-warning btn-lg mt-3 ">gallery</a></h1>
-      <h2 >Event Management | Wedding Planning | Corporate Events | Birthday parties</h2>
-               </div>
-          </div>
-          </div>
+    <!-- Background image tex Section -->
+    <section class="image">
+      <div class="container">
+        <h1>We Make Your Events Memorable</h1>
+        <p>Wedding • Corporate • Birthday • Concerts • Festivals</p>
+        <a href="gallery.html" class="btn btn-warning btn-lg mt-3">Gallery</a>
 
-
-        </div>
+      </div>
     </section>
 
   </MAIN>
@@ -209,11 +220,12 @@ display: flex;
               includes a variety of <strong>event planning services</strong> such as wedding planning, birthday parties,
               corporate events, destination weddings, rental services and get-togethers. Thus, Décor Destination is your
               “One-Stop” destination for all sorts of celebrations and occasions. </p>
-            <p class="p-3"> We are the most reliable and famous wedding planners that will not disappoint you. We have an
+            <p class="p-3"> We are the most reliable and famous wedding planners that will not disappoint you. We have
+              an
               experienced, trained and highly skilled team for your assistance at every step. With the help of our
               exceptional event management abilities, we are able to deliver a service that is a blend of uniqueness,
               creativity and precision. Each event is special and gives an excuse to rejoice with your loved ones.
-             </p>
+            </p>
           </div>
         </div>
       </div>
@@ -229,51 +241,58 @@ display: flex;
     </div>
 
   </section>
-<div style="text-align: center; margin: 20px;">
- 
-<h2 class= " containe-fluid2 fw-bold " style="color: #4b1e0d" ; class="animated-text">
-  <i class="fa fa-check vlu-icomn"></i>
-  Our Core Services are</h2>
-					</div>
-          <div class="row p-4">
-					<div class="col-md-4">
-					<ul>
-  <p class="bi bi-check-square-fill p-2"> Event concept curation and design</p>
-  <p class="bi bi-check-square-fill p-2"> Venue selection and coordination</p>
-  <p class="bi bi-check-square-fill p-2"> Décor and Vendor management</p>
-  <p class="bi bi-check-square-fill p-2"> Hospitality and Logistics coordination</p>
-  <p class="bi bi-check-square-fill p-2">Timeline creation, on-site coordination and supervision</p>
-</ul>
-					</div>
-					<div class="col-md-4 image-center border border-0">
-						<div class="value-sec-img hover-image">
-							<img src="images/vlue-imges (2).jpeg" alt="famous wedding Planner">
-						</div>
-					</div>
-					<div class="col-md-4 p-4">
-					<ul>
-  <p class="bi bi-check-square-fill p-2"> Entertainment and Artist sourcing (Photographers, Videographers, DJ, Choreographers, Emcees)</p>
-  <p class="bi bi-check-square-fill p-2">Guest management and RSVP tracking</p>
-  <p class="bi bi-check-square-fill p-2">Corporate event marketing and branding</p>
-  <p class="bi bi-check-square-fill p-2">Budget management</p>
-  <p class="bi bi-check-square-fill p-2">Post-event evaluation, clean-up and follow up</p>
-</ul>
-</div>
-				</div>
 
+  <!--our sevices-->
+  <div style="text-align: center; margin: 20px;">
+
+    <h2 class=" containe-fluid2 fw-bold " style="color: #4b1e0d" ; class="animated-text">
+      <i class="fa fa-check vlu-icomn"></i>
+      Our Core Services are
+    </h2>
+  </div>
+  <div class="row p-4">
+    <div class="col-md-4">
+      <ul>
+        <p class="bi bi-check-square-fill p-2"> Event concept curation and design</p>
+        <p class="bi bi-check-square-fill p-2"> Venue selection and coordination</p>
+        <p class="bi bi-check-square-fill p-2"> Décor and Vendor management</p>
+        <p class="bi bi-check-square-fill p-2"> Hospitality and Logistics coordination</p>
+        <p class="bi bi-check-square-fill p-2">Timeline creation, on-site coordination and supervision</p>
+      </ul>
+    </div>
+    <div class="col-md-4 image-center border border-0">
+      <div class="value-sec-img hover-image">
+        <img src="images/vlue-imges (2).jpeg" alt="famous wedding Planner">
+      </div>
+    </div>
+    <div class="col-md-4 p-4">
+      <ul>
+        <p class="bi bi-check-square-fill p-2"> Entertainment and Artist sourcing (Photographers, Videographers, DJ,
+          Choreographers, Emcees)</p>
+        <p class="bi bi-check-square-fill p-2">Guest management and RSVP tracking</p>
+        <p class="bi bi-check-square-fill p-2">Corporate event marketing and branding</p>
+        <p class="bi bi-check-square-fill p-2">Budget management</p>
+        <p class="bi bi-check-square-fill p-2">Post-event evaluation, clean-up and follow up</p>
+      </ul>
+    </div>
+  </div>
+
+  <!--vision-->
   <section>
     <div class="container p-3 mar-md-top">
       <div class="row">
         <div class="col-md-6">
           <div class="card1">
             <span class="row-lines"></span>
-            <h1 style="color: #4b1e0d";>VISION</h1>
+            <h1 style="color: #4b1e0d" ;>VISION</h1>
             <p>Weddings and events are a regular affair in India. Décor Destination holds a vision to revolutionise the
               way events are conceived, planned and executed in India. As an aspiring and the best event planners in
               India we wish to connect with our audiences We strive to cater to client’s objectives and vision with our
               touch of professionalism and flawless execution that captivate our guests.</p>
           </div>
         </div>
+
+        <!--Mission-->
         <div class="col-md-6">
           <div class="card2">
             <h1 style="color: #4b1e0d" ;>MISSION</h1>
@@ -283,7 +302,7 @@ display: flex;
               meticulous attention to detail, Décor Destination’s mission is to offer a service that exceeds client
               expectations. As the we commit to deliver excellence, luxe facilities and unmatched experiences!</p>
           </div>
-          </div>
+        </div>
       </div>
     </div>
 
@@ -291,8 +310,9 @@ display: flex;
   <section class="py-2" style="background-color: #d2a679">
     <div class="container">
       <em>
-        <h5 class="text-center fw-bold mb-4 text-box" style="color: #4b1e0d" ; class="animated-text">Create everlasting moments by booking
-best wedding planners for your perfect day!</h5>
+        <h5 class="text-center fw-bold mb-4 text-box" style="color: #4b1e0d" ; class="animated-text">Create everlasting
+          moments by booking
+          best wedding planners for your perfect day!</h5>
 
 
       </em>
