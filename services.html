@@ -1,116 +1,373 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Management Services</title>
-    <!-- bootstrap css -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
-      crossorigin="anonymous">
-    <style>
-                body{
-                    font-family:Arial,sans-serif;
-                    margin:0;
-                    padding:0;
-                }
-                header{
-                    background-color:aliceblue;
-                    color:black;
-                    text-align:center;
-                    padding:20px 0;
-                }
-                nav ul{
-                    list-style-type:none;
-                    padding:0;
-                }
-                nav ul li{
-                    display:inline;
-                    margin:0 15px;
-                }
-                nav ul li a{
-                    color:black;
-                    text-decoration:none;
-                }
-                footer {
-                   background: #222;
-                   color: #bbb;
-                   padding: 20px 0;
-                   text-align: center;
-                  }
-     </style>
 
-  </head>
-  <body>
-    <header>
-      <h1>Our Services</h1>
-      <nav>
-        <ul>
-          <li><a href="#wedding">wedding planning</a></li>
-          <li><a href="#corporate">corportate event</a></li>
-          <li><a href="#birthday">birthday parties</a></li>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EventHub - Our Services</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fdf3e7;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navbar */
+    .navbar {
+      transition: all 0.4s ease;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(6px);
+    }
+
+    .navbar.scrolled {
+      background: rgba(0, 0, 0, 0.95);
+    }
+
+    /* Hero Section */
+    .services-hero {
+      background: url("images/elegant-blue-gold-banner.jpg") center/cover no-repeat;
+      height: 60vh;
+      color: white;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .services-hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(120deg, rgba(0, 0, 0, 0.7), rgba(230, 126, 34, 0.6));
+    }
+
+    .services-hero h1,
+    .services-hero p {
+      position: relative;
+      z-index: 1;
+    }
+
+    .services-hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .services-hero p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    /* Service Cards */
+    .service-card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.4s ease;
+      overflow: hidden;
+      border: 2px solid transparent;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px) scale(1.02);
+      border: 2px solid #e67e22;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .service-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .service-card-body {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .service-card-body h3 {
+      color: #4b1e0d;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+
+    .service-card-body p {
+      font-size: 1rem;
+      color: #666;
+    }
+
+    .service-icon {
+      font-size: 2rem;
+      color: #e67e22;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .service-card:hover .service-icon {
+      transform: scale(1.2);
+      animation: bounce 0.6s;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+    }
+
+    .service-card-body .btn {
+      margin-top: 15px;
+      background: #e67e22;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .service-card-body .btn:hover {
+      background: #d35400;
+      transform: scale(1.05);
+    }
+
+    /* CTA Section */
+    .cta-section {
+    background: url("https://images.unsplash.com/photo-1529634899531-2a8c9a4a58d1") center/cover fixed no-repeat;
+    padding: 80px 20px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    }
+
+
+    .cta-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .cta-section h2,
+    .cta-section p,
+    .cta-section .btn {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+
+    .cta-section .btn {
+      background: #e67e22;
+      color: #fff;
+      padding: 12px 30px;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .cta-section .btn:hover {
+      background: #d35400;
+      transform: scale(1.05);
+    }
+
+    /* Footer */
+    footer {
+      background: #222;
+      color: #bbb;
+      padding: 25px 0;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #bbb;
+      transition: all 0.3s ease;
+      margin: 0 10px;
+      display: inline-block;
+    }
+
+    footer a:hover {
+      color: #e67e22;
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+        <img src="images/logo png.jpg" alt="EventHub Logo" width="40" height="40" class="me-2 rounded-circle">
+        EventHub
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
-      </nav>
-    </header>
+      </div>
+    </div>
+  </nav>
 
-    <section class="services py-5 bg-light">
-      <div class="container">
-        <h2 class="text-center mb-5"></h2>
-        <div class="row g-4">
-          <div class="col-md-4">
-            <div class="card shadow h-100">
-              <img src="images/Modern Mandap Decor Concepts.jpg"
-                class="card-img-top" alt="Wedding">
-              <div class="card-body text-center">
-                <h5 class="card-title">Wedding Planning</h5>
-                <p class="card-text">From venue selection to decoration, we
-                  create magical weddings tailored to your dreams.</p>
-              </div>
-            </div>
-          </div>
+  <!-- Hero Section -->
+  <section class="services-hero">
+    <h1 class="animate__animated animate__fadeInDown">Our Services</h1>
+    <p class="animate__animated animate__fadeInUp">Making every occasion unforgettable</p>
+  </section>
 
-          <div class="col-md-4">
-            <div class="card shadow h-100">
-              <img src="images/c.33.jpg" class="card-img-top" alt="Corporate">
-              <div class="card-body text-center">
-                <h5 class="card-title">Corporate Events</h5>
-                <p class="card-text">Professional and elegant event solutions
-                  for business meetings, launches, and seminars.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card shadow h-100">
-              <img src="images/bday1.jpg" class="card-img-top" alt="Birthday">
-              <div class="card-body text-center">
-                <h5 class="card-title">Birthday Parties</h5>
-                <p class="card-text">Fun-filled birthday parties with customized
-                  themes, cakes, and entertainment for all ages.</p>
-              </div>
-            </div>
+  <!-- Services Grid -->
+  <section class="container py-5">
+    <div class="row g-4">
+      <!-- Service 1 -->
+      <div class="col-md-4">
+        <div class="service-card">
+          <img src="images/Bride back image1.jpeg" alt="Wedding">
+          <div class="service-card-body">
+            <i class="fa-solid fa-ring service-icon"></i>
+            <h3>Wedding Planning</h3>
+            <p>From décor to coordination, we make your wedding magical.</p>
+            <a href="contact.html" class="btn">Book Now</a>
           </div>
         </div>
       </div>
-    </section>
+      <!-- Service 2 -->
+      <div class="col-md-4">
+        <div class="service-card">
+          <img src="images/c.22.jpg" alt="Corporate">
+          <div class="service-card-body">
+            <i class="fa-solid fa-briefcase service-icon"></i>
+            <h3>Corporate Events</h3>
+            <p>Professional events that build your brand and impress your clients.</p>
+            <a href="contact.html" class="btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <!-- Service 3 -->
+      <div class="col-md-4">
+        <div class="service-card">
+          <img src="images/bday1.jpg" alt="Birthday">
+          <div class="service-card-body">
+            <i class="fa-solid fa-cake-candles service-icon"></i>
+            <h3>Birthday Parties</h3>
+            <p>Fun-filled, creative and personalized birthday celebrations for all ages.</p>
+            <a href="contact.html" class="btn">Book Now</a>
+          </div>
+        </div>
+      </div>
 
-    <!-- footer -->
-    <footer>
-      <p>&copy; 2025 EventHub | All Rights Reserved</p>
-      <p>
-        <a href="#" class="text-light me-3">Facebook</a>
-        <a href="#" class="text-light me-3">Instagram</a>
-        <a href="#" class="text-light">Twitter</a>
-      </p>
-    </footer>
+      <!-- Service 4 -->
+      <div class="col-md-4">
+        <div class="service-card">
+          <img src="images/slid6.jpg" alt="Celebrity Events">
+          <div class="service-card-body">
+            <i class="fa-solid fa-star service-icon"></i>
+            <h3>Celebrity Events</h3>
+            <p>Host events with stars, live bands, and influencers for maximum impact.</p>
+            <a href="contact.html" class="btn">Book Now</a>
+          </div>
+        </div>
+      </div>
 
-    <!-- bootstrap js    -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-      crossorigin="anonymous"></script>
-  </body>
+      <!-- Service 5 -->
+      <div class="col-md-4">
+        <div class="service-card">
+          <img src="images/slide 7.jpg" alt="Educational Events">
+          <div class="service-card-body">
+            <i class="fa-solid fa-graduation-cap service-icon"></i>
+            <h3>Educational Events</h3>
+            <p>Organizing workshops, seminars, and various cultural programs seamlessly.</p>
+            <a href="contact.html" class="btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 6 -->
+      <div class="col-md-4">
+        <div class="service-card">
+          <img src="images/baby-shower-grand-decoration-500x500.webp" alt="Baby Showers">
+          <div class="service-card-body">
+            <i class="fa-solid fa-baby service-icon"></i>
+            <h3>Baby Showers</h3>
+            <p>Creating warm, beautiful, and memorable celebrations for families.</p>
+            <a href="contact.html" class="btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="mb-4">🎉 Upcoming Offers</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card shadow border-0">
+          <div class="card-body">
+            <h5 class="card-title">Wedding Packages</h5>
+            <p class="card-text">Flat 20% OFF on premium décor bookings before Diwali.</p>
+            <span class="badge bg-success">Limited Time</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow border-0">
+          <div class="card-body">
+            <h5 class="card-title">Corporate Events</h5>
+            <p class="card-text">Book 2 events & get the 3rd at 50% OFF.</p>
+            <span class="badge bg-danger">Hot Deal</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Call To Action -->
+  <section class="cta-section">
+    <h2>Let’s Create Your Dream Event</h2>
+    <p>Contact us today and make your occasion extraordinary with EventHub.</p>
+    <a href="contact.html" class="btn">Get In Touch</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 EventHub | All Rights Reserved</p>
+    <p>
+      <a href="#"><i class="fab fa-facebook fa-lg"></i></a>
+      <a href="#"><i class="fab fa-instagram fa-lg"></i></a>
+      <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
+    </p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+</body>
 </html>
