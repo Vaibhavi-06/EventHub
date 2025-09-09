@@ -1,73 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EventHub - Home</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <title>EventHub - Event Management</title>
 
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <!-- Custom CSS -->
   <style>
     body {
-      background-color: #e8c7a5;
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
+      background: #fdfdfd;
+      margin: 0;
+      padding: 0;
     }
 
+    /* Navbar */
+    .navbar {
+      backdrop-filter: blur(10px);
+      background: rgba(0,0,0,0.7) !important;
+    }
+    .navbar-brand {
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #f8c94e !important;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url("images/event-marketing-banner.jpg") center/cover no-repeat;
+      height: 100vh;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+    }
+    .hero p {
+      font-size: 1.2rem;
+    }
+    .hero .btn {
+      margin-top: 20px;
+      padding: 12px 30px;
+      font-size: 1.1rem;
+      border-radius: 50px;
+    }
+
+    /* About */
+    .about-section {
+      background: linear-gradient(to right, #fdf6ec, #fae3c6);
+      padding: 80px 0;
+    }
+    .about-section img {
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    }
+
+    /* Services */
+    .service-card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 25px;
+      transition: 0.4s;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+    }
+    .service-card i {
+      font-size: 40px;
+      color: #f8c94e;
+      margin-bottom: 15px;
+    }
+
+    /* Stats */
+    .stats-section {
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url(images/state\ baground.jpg) center/cover no-repeat;
+      color: #fff;
+      padding: 80px 0;
+      text-align: center;
+    }
+    .stat h3 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #f8c94e;
+    }
+
+    /* Footer */
     footer {
-      background: #222;
+      background: linear-gradient(to right, #111, #222);
       color: #bbb;
-      padding: 20px 0;
+      padding: 25px 0;
       text-align: center;
     }
-
-    .banner-section {
-      height: 85vh;
-      text-align: center;
-      color: white;
+    footer a {
+      color: #f8c94e;
+      margin: 0 10px;
+      text-decoration: none;
     }
-
-    .carousel-item img {
-      height: 85vh;
-      object-fit: cover;
-    }
-
-    .banner-section h1 {
-      font-size: 3rem;
-      text-shadow: 2px 2px 5px #000;
-    }
-
-    .card {
-      background-color: #f7eccb;
-      border-radius: 10px;
-      transition: transform .3s;
-    }
-
-    .card:hover {
-      transform: scale(1.05);
-    }
-
-    .section-title {
-      text-align: center;
-      color: #4b1e0d;
-      font-weight: bold;
-      margin: 40px 0 20px;
+    footer a:hover {
+      color: #fff;
     }
   </style>
 </head>
-
 <body>
+
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-gem"></i> EventHub</a>
+      <a class="navbar-brand" href="#">EventHub</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
           <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
@@ -77,107 +138,79 @@
     </div>
   </nav>
 
-  <!-- Banner / Carousel -->
-  <section class="banner-section">
-    <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="images/Bride back image1.jpeg" class="d-block w-100" alt="Wedding Banner">
-          <div class="carousel-caption d-none d-md-block">
-            <h1>Welcome to EventHub</h1>
-            <p>Crafting unforgettable weddings, parties, and corporate events</p>
-            <a href="services.html" class="btn btn-warning btn-lg">Explore Services</a>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="images/wedding-banner.jpeg" class="d-block w-100" alt="Wedding Event">
-          <div class="carousel-caption d-none d-md-block">
-            <h1>Celebrate with Style</h1>
-            <p>Making your dream events a reality</p>
-          </div>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </button>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="animate__animated animate__fadeInDown">We Create Unforgettable Events</h1>
+      <p class="animate__animated animate__fadeInUp">From Weddings to Corporate Gatherings, We Handle It All</p>
+      <a href="services.html" class="btn btn-warning btn-lg">Discover Our Services</a>
     </div>
   </section>
 
-  <!-- About Preview (Simple Version) -->
-  <div class="container py-5">
-    <h2 class="text-center fw-bold mb-4">Who We Are</h2>
-    <div class="row align-items-center">
-      <!-- Images -->
-      <div class="col-md-6">
-        <div class="row g-3">
-          <div class="col-6">
-            <img src="images/wed6.6.jpg" class="img-fluid rounded shadow-sm" alt="Wedding Celebration">
-          </div>
-          <div class="col-6">
-            <img src="images/event background1.jpg" class="img-fluid rounded shadow-sm" alt="Event Decoration">
-          </div>
+  <!-- About -->
+  <section class="about-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <img src="images/wed6.6.jpg" alt="About EventHub" class="img-fluid">
         </div>
-      </div>
-      <!-- Text -->
-      <div class="col-md-6">
-        <h4 class="fw-bold">Creating Memories That Last</h4>
-        <p>
-          At <strong>EventHub</strong>, we make your celebrations unforgettable.  
-          From weddings and corporate events to birthdays, we plan every detail 
-          with care and creativity.
-        </p>
-        <a href="about.html" class="btn btn-dark">Learn More <i class="bi bi-arrow-right-circle"></i></a>
+        <div class="col-md-6">
+          <h2 class="fw-bold mb-3">Who We Are</h2>
+          <p>At <strong>EventHub</strong>, we turn your dreams into reality. With 5+ years of expertise, our team has successfully managed weddings, birthdays, corporate events, and cultural celebrations.</p>
+          <p>We don’t just plan events, we craft unforgettable memories.</p>
+          <a href="about.html" class="btn btn-dark mt-2">Learn More</a>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Services Preview -->
-  <div class="container py-5">
-    <h2 class="section-title">Our Services</h2>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card p-3 shadow">
-          <img src="images/wedding planning.avif" class="card-img-top rounded" alt="Wedding Planning">
-          <div class="card-body text-center">
-            <h5 class="fw-bold">Wedding Planning</h5>
-            <p>Decor, logistics, and unforgettable celebrations.</p>
-            <a href="services.html" class="btn btn-outline-dark">Read More</a>
+  <!-- Services -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-5">Our Core Services</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="service-card">
+            <i class="fa-solid fa-ring"></i>
+            <h4>Wedding Planning</h4>
+            <p>From dreamy décor to flawless execution, we make weddings magical.</p>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card p-3 shadow">
-          <img src="images/corporate.avif" class="card-img-top rounded" alt="Corporate Events">
-          <div class="card-body text-center">
-            <h5 class="fw-bold">Corporate Events</h5>
-            <p>Professional event solutions for businesses.</p>
-            <a href="services.html" class="btn btn-outline-dark">Read More</a>
+        <div class="col-md-4">
+          <div class="service-card">
+            <i class="fa-solid fa-briefcase"></i>
+            <h4>Corporate Events</h4>
+            <p>Professional conferences, award shows, and team gatherings done right.</p>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card p-3 shadow">
-          <img src="images/Birthday Parties.avif" class="card-img-top rounded" alt="Birthday Parties">
-          <div class="card-body text-center">
-            <h5 class="fw-bold">Birthday Parties</h5>
-            <p>Fun-filled themes and joyful moments.</p>
-            <a href="services.html" class="btn btn-outline-dark">Read More</a>
+        <div class="col-md-4">
+          <div class="service-card">
+            <i class="fa-solid fa-cake-candles"></i>
+            <h4>Personal Celebrations</h4>
+            <p>Birthdays, anniversaries, and private parties with unforgettable vibes.</p>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- CTA -->
-  <section class="py-4" style="background-color:#d2a679;">
-    <div class="container text-center">
-      <h3 class="fw-bold" style="color:#4b1e0d;">Plan Your Dream Event With Us</h3>
-      <a href="contact.html" class="btn btn-dark mt-3"><i class="bi bi-envelope-fill"></i> Get in Touch</a>
+  <!-- Stats -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 stat">
+          <h3 class="counter">5+</h3>
+          <p>Years of Experience</p>
+        </div>
+        <div class="col-md-4 stat">
+          <h3 class="counter">300+</h3>
+          <p>Events Organized</p>
+        </div>
+        <div class="col-md-4 stat">
+          <h3 class="counter">25+</h3>
+          <p>Team Members</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -185,14 +218,13 @@
   <footer>
     <p>&copy; 2025 EventHub | All Rights Reserved</p>
     <p>
-      <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i> Facebook</a>
-      <a href="#" class="text-light me-3"><i class="bi bi-instagram"></i> Instagram</a>
-      <a href="#" class="text-light"><i class="bi bi-twitter"></i> Twitter</a>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
     </p>
   </footer>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
