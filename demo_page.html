@@ -52,13 +52,17 @@
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
-      color: white;
+    }
+
+    .banner-text h1,
+    .banner-text p {
+      color: #ffcc00;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
     }
 
     .banner-text h1 {
       font-size: 3rem;
       font-weight: bold;
-      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
     }
 
     .banner-text p {
@@ -147,6 +151,27 @@
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
 
+    /* Features */
+    #features h2 {
+      color: #4b1e0d;
+    }
+
+    /* Testimonials */
+    #testimonials {
+      background: #fff;
+    }
+
+    /* Gallery */
+    #gallery img {
+      height: 250px;
+      object-fit: cover;
+    }
+
+    /* Newsletter */
+    #newsletter {
+      background: #4b1e0d;
+    }
+
     /* Footer */
     footer {
       background: #2c1b0e;
@@ -207,6 +232,7 @@
           <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
       </div>
@@ -219,7 +245,7 @@
     <div class="banner-text">
       <h1>Welcome to EventHub</h1>
       <p>Crafting unforgettable weddings, parties, and corporate events</p>
-      <a href="services.html" class="btn btn-warning btn-lg">Explore Services</a>
+      <a href="events.html" class="btn btn-warning btn-lg">Explore Events</a>
     </div>
   </section>
 
@@ -293,6 +319,93 @@
     </div>
   </section>
 
+  <!-- Features Section -->
+  <section id="features" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center fw-bold text-dark mb-5">Why Choose EventHub?</h2>
+      <div class="row g-4 text-center">
+        <div class="col-md-3">
+          <i class="bi bi-people-fill text-success fs-1"></i>
+          <h5 class="mt-3">Experienced Team</h5>
+          <p>Our experts ensure every event is executed with precision and style.</p>
+        </div>
+        <div class="col-md-3">
+          <i class="bi bi-gift-fill text-danger fs-1"></i>
+          <h5 class="mt-3">Creative Designs</h5>
+          <p>We bring fresh, innovative ideas to every celebration we plan.</p>
+        </div>
+        <div class="col-md-3">
+          <i class="bi bi-clock-history text-primary fs-1"></i>
+          <h5 class="mt-3">On-Time Delivery</h5>
+          <p>We value your time and deliver smooth, timely event execution.</p>
+        </div>
+        <div class="col-md-3">
+          <i class="bi bi-heart-fill text-warning fs-1"></i>
+          <h5 class="mt-3">Customer Satisfaction</h5>
+          <p>Our clients’ happiness is our biggest achievement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-5">
+    <div class="container">
+      <h2 class="text-center fw-bold text-dark mb-5">What Our Clients Say</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="p-4 bg-white shadow rounded text-center">
+            <p>"EventHub made our wedding magical. Every detail was perfect!"</p>
+            <h6 class="fw-bold mt-3">- Priya & Rohan</h6>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 bg-white shadow rounded text-center">
+            <p>"Their team organized our corporate gala seamlessly. Truly professional."</p>
+            <h6 class="fw-bold mt-3">- TechCorp Pvt. Ltd.</h6>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 bg-white shadow rounded text-center">
+            <p>"The birthday party theme was outstanding! My kids loved it."</p>
+            <h6 class="fw-bold mt-3">- Neha Sharma</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center fw-bold text-dark mb-5">Event Gallery</h2>
+      <div class="row g-3">
+        <div class="col-md-4"><img src="images/bday6.webp" class="img-fluid rounded shadow" alt="Gallery Image"></div>
+        <div class="col-md-4"><img src="images/Birthday Parties.avif" class="img-fluid rounded shadow" alt="Gallery Image"></div>
+        <div class="col-md-4"><img src="images/beach.jpg" class="img-fluid rounded shadow" alt="Gallery Image"></div>
+        <div class="col-md-4"><img src="images/wedding decor.jpg" class="img-fluid rounded shadow" alt="Gallery Image"></div>
+        <div class="col-md-4"><img src="images/wed1.44.jpg" class="img-fluid rounded shadow" alt="Gallery Image"></div>
+        <div class="col-md-4"><img src="images/baby-shower-grand-decoration-500x500.webp" class="img-fluid rounded shadow" alt="Gallery Image"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section id="newsletter" class="py-5 text-center text-white">
+    <div class="container">
+      <h3 class="fw-bold">Stay Connected with EventHub</h3>
+      <p class="mb-4">Subscribe to our newsletter and get the latest updates & offers.</p>
+      <form class="row justify-content-center">
+        <div class="col-md-6 col-sm-8">
+          <div class="input-group">
+            <input type="email" class="form-control rounded-start" placeholder="Enter your email" required>
+            <button class="btn btn-warning rounded-end">Subscribe</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer>
     <div class="container">
@@ -307,6 +420,7 @@
             <li><a href="#">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="services.html">Services</a></li>
+            <li><a href="events.html">Events</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
