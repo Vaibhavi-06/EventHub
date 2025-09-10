@@ -16,12 +16,20 @@
 
 </head>
   <style>
+       /* Footer */
     footer {
-      background: #222;
+      background: linear-gradient(to right, #111, #222);
       color: #bbb;
-      padding: 20px 0;
+      padding: 25px 0;
       text-align: center;
-       margin-top: 20px;
+    }
+    footer a {
+      color: #f8c94e;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    footer a:hover {
+      color: #fff;
     }
 
     body {
@@ -406,15 +414,16 @@
 }
 
 .stats-section {
-    background: url(images/state\ baground.jpg) center/cover no-repeat;
-    padding: 100px 0;
-    text-align: center;
-    color: white;
-    position: relative;
-    overflow: hidden;
-    margin-top: 20px; /* space above the image */
-  margin-bottom: 20px; /* space below the image */
-}
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url(images/state\ baground.jpg) center/cover no-repeat;
+      color: #fff;
+      padding: 80px 0;
+      text-align: center;
+    }
+    .stat h3 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #f8c94e;
+    }
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.6); /* dark overlay for readability */
@@ -866,37 +875,67 @@ html {
         </div>
       </div>
     </div>  
-
-
-</section>
-  <section class="stats-section">
-    <div class="overlay">
-      <h2 class="stats-title">SOME STATS</h2>
-      <div class="stats-container">
-        <div class="stat-item">
-          <h3>5</h3>
-          <p>YEAR OF EXPERIENCE</p>
-        </div>
-        <div class="stat-item">
-          <h3>300+</h3>
-          <p>EVENTS DONE</p>
-        </div>
-        <div class="stat-item">
-          <h3>27</h3>
-          <p>TEAM MEMBERS</p>
-        </div>
-        
+<hr style="border: 4px solid  #4b1e0d; margin: 40px 0 ;">
+<!-- Stats with Counter -->
+<section class="stats-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 stat animate__animated animate__zoomIn">
+        <h3><span class="counter" data-target="500">300</span>+</h3>
+        <p>Events Organized</p>
+      </div>
+      <div class="col-md-3 stat animate__animated animate__zoomIn animate__delay-1s">
+        <h3><span class="counter" data-target="120">23</span>+</h3>
+        <p>Corporate Clients</p>
+      </div>
+      <div class="col-md-3 stat animate__animated animate__zoomIn animate__delay-2s">
+        <h3><span class="counter" data-target="50">27</span>+</h3>
+        <p>Team Members</p>
+      </div>
+      <div class="col-md-3 stat animate__animated animate__zoomIn animate__delay-3s">
+        <h3><span class="counter" data-target="99">99</span>%</h3>
+        <p>Client Satisfaction</p>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
+
+  <!-- Testimonials -->
+<section class="py-5">
+  <div class="container" >
+    <h2 class="text-center fw-bold mb-5 about-heading" >What Our Clients Say</h2>
+    <div class="row g-4">
+      <div class="col-md-4 animate__animated animate__fadeInLeft">
+        <div class="p-4 bg-white shadow rounded">
+          <p>"EventHub planned our wedding perfectly. It was like a fairytale!"</p>
+          <h6 class="fw-bold mt-3">— Priya Sharma</h6>
+        </div>
+      </div>
+      <div class="col-md-4 animate__animated animate__fadeInUp animate__delay-1s">
+        <div class="p-4 bg-white shadow rounded">
+          <p>"Professional, on-time, and so creative. Our product launch was a hit!"</p>
+          <h6 class="fw-bold mt-3">— Rahul Mehta</h6>
+        </div>
+      </div>
+      <div class="col-md-4 animate__animated animate__fadeInRight animate__delay-2s">
+        <div class="p-4 bg-white shadow rounded">
+          <p>"They made my daughter’s birthday unforgettable. Thank you!"</p>
+          <h6 class="fw-bold mt-3">— Asha Verma</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
  
   <!-- Footer -->
-  <footer >
+<footer>
     <p>&copy; 2025 EventHub | All Rights Reserved</p>
     <p>
-      <a href="#" class="text-light me-3">Facebook</a>
-      <a href="#" class="text-light me-3">Instagram</a>
-      <a href="#" class="text-light">Twitter</a>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
     </p>
   </footer>
 
