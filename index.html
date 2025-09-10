@@ -1,0 +1,449 @@
+<<<<<<< HEAD
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EventHub - Event Management</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fdf3e7;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #4b1e0d !important;
+    }
+
+    .navbar-brand img {
+      border-radius: 5px;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.4rem;
+      color: #fff !important;
+    }
+
+    /* Banner */
+    .banner-section {
+      position: relative;
+      height: 85vh;
+      overflow: hidden;
+    }
+
+    .banner-section img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .banner-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .banner-text h1,
+    .banner-text p {
+      color: #ffcc00;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+    }
+
+    .banner-text h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .banner-text p {
+      font-size: 1.2rem;
+      margin: 10px 0 20px;
+    }
+
+    /* About & Services Section */
+    #about,
+    #services {
+      padding: 60px 0;
+      background: #fff;
+      color: #333;
+    }
+
+    #about h2,
+    #services h2 {
+      color: #4b1e0d;
+      margin-bottom: 20px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .about-img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Service Cards */
+    .service-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .service-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .service-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .service-card h5 {
+      margin-top: 15px;
+      font-weight: bold;
+      color: #4b1e0d;
+    }
+
+    .service-card p {
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    .service-card .btn-outline-dark {
+      transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .service-card .btn-outline-dark:hover {
+      background-color: #4b1e0d;
+      color: #fff;
+      transform: translateY(-3px);
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: linear-gradient(rgba(75, 30, 13, 0.85), rgba(75, 30, 13, 0.85)), url('images/event background1.jpg') no-repeat center center/cover;
+      color: #fff;
+    }
+
+    .cta-section h3 {
+      color: #ffcc00;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Features */
+    #features h2 {
+      color: #4b1e0d;
+    }
+
+    /* Testimonials */
+    #testimonials {
+      background: #fff;
+    }
+
+    /* Gallery */
+    #gallery img {
+      height: 250px;
+      object-fit: cover;
+    }
+
+    /* Newsletter */
+    #newsletter {
+      background: #4b1e0d;
+    }
+
+    /* Footer */
+    footer {
+      background: #2c1b0e;
+      color: #fff;
+      padding: 40px 0 20px 0;
+    }
+
+    footer h5 {
+      color: #ffcc00;
+      margin-bottom: 15px;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 5px;
+      transition: 0.3s;
+    }
+
+    footer a:hover {
+      color: #ffcc00;
+    }
+
+    .social-icons a {
+      font-size: 1.2rem;
+      display: inline-block;
+      margin-right: 10px;
+      color: #fff;
+      border: 1px solid #fff;
+      padding: 8px 10px;
+      border-radius: 50%;
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      background: #ffcc00;
+      color: #4b1e0d;
+      border-color: #ffcc00;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark shadow fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+        <img src="images/logo png.jpg" alt="EventHub Logo" width="40" height="40" class="me-2">
+        EventHub
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Banner -->
+  <section class="banner-section">
+    <img src="images/event background1.jpg" alt="EventHub Banner">
+    <div class="banner-text">
+      <h1>Welcome to EventHub</h1>
+      <p>Crafting unforgettable weddings, parties, and corporate events</p>
+      <a href="events.html" class="btn btn-warning btn-lg">Explore Events</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <img src="images/wed6.6.jpg" class="about-img" alt="Wedding Celebration">
+        </div>
+        <div class="col-md-6">
+          <h2>Who We Are</h2>
+          <p>
+            At <strong>EventHub</strong>, we make your celebrations unforgettable. From weddings and corporate events
+            to birthdays, our team plans every detail with care, creativity, and passion. We ensure each moment is
+            memorable and perfectly crafted for you.
+          </p>
+          <a href="about.html" class="btn btn-dark mt-2">Learn More <i class="bi bi-arrow-right-circle"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <div class="container py-5">
+      <h2>Our Services</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="service-card p-3 shadow">
+            <img src="images/wedding planning.avif" alt="Wedding Planning">
+            <div class="card-body text-center">
+              <h5 class="fw-bold">Wedding Planning</h5>
+              <p>Decor, logistics, and unforgettable celebrations.</p>
+              <a href="services.html" class="btn btn-outline-dark">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-card p-3 shadow">
+            <img src="images/corporate.avif" alt="Corporate Events">
+            <div class="card-body text-center">
+              <h5 class="fw-bold">Corporate Events</h5>
+              <p>Professional event solutions for businesses.</p>
+              <a href="services.html" class="btn btn-outline-dark">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-card p-3 shadow">
+            <img src="images/Birthday Parties.avif" alt="Birthday Parties">
+            <div class="card-body text-center">
+              <h5 class="fw-bold">Birthday Parties</h5>
+              <p>Fun-filled themes and joyful moments.</p>
+              <a href="services.html" class="btn btn-outline-dark">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section text-center py-5">
+    <div class="container">
+      <h3 class="fw-bold mb-3">Plan Your Dream Event With Us</h3>
+      <p class="mb-4">From weddings to corporate events, we craft every detail to perfection.</p>
+      <a href="contact.html" class="btn btn-lg btn-light shadow rounded-pill">
+        <i class="bi bi-envelope-fill"></i> Get in Touch
+      </a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center fw-bold text-dark mb-5">Why Choose EventHub?</h2>
+      <div class="row g-4 text-center">
+        <div class="col-md-3">
+          <i class="bi bi-people-fill text-success fs-1"></i>
+          <h5 class="mt-3">Experienced Team</h5>
+          <p>Our experts ensure every event is executed with precision and style.</p>
+        </div>
+        <div class="col-md-3">
+          <i class="bi bi-gift-fill text-danger fs-1"></i>
+          <h5 class="mt-3">Creative Designs</h5>
+          <p>We bring fresh, innovative ideas to every celebration we plan.</p>
+        </div>
+        <div class="col-md-3">
+          <i class="bi bi-clock-history text-primary fs-1"></i>
+          <h5 class="mt-3">On-Time Delivery</h5>
+          <p>We value your time and deliver smooth, timely event execution.</p>
+        </div>
+        <div class="col-md-3">
+          <i class="bi bi-heart-fill text-warning fs-1"></i>
+          <h5 class="mt-3">Customer Satisfaction</h5>
+          <p>Our clients’ happiness is our biggest achievement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-5">
+    <div class="container">
+      <h2 class="text-center fw-bold text-dark mb-5">What Our Clients Say</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="p-4 bg-white shadow rounded text-center">
+            <p>"EventHub made our wedding magical. Every detail was perfect!"</p>
+            <h6 class="fw-bold mt-3">- Priya & Rohan</h6>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 bg-white shadow rounded text-center">
+            <p>"Their team organized our corporate gala seamlessly. Truly professional."</p>
+            <h6 class="fw-bold mt-3">- TechCorp Pvt. Ltd.</h6>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 bg-white shadow rounded text-center">
+            <p>"The birthday party theme was outstanding! My kids loved it."</p>
+            <h6 class="fw-bold mt-3">- Neha Sharma</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center fw-bold text-dark mb-5">Event Gallery</h2>
+      <div class="row g-3">
+        <div class="col-md-4"><img src="images/bday6.webp" class="img-fluid rounded shadow" alt="Gallery Image"></div>
+        <div class="col-md-4"><img src="images/Birthday Parties.avif" class="img-fluid rounded shadow" alt="Gallery Image"></div>
+        <div class="col-md-4"><img src="images/beach.jpg" class="img-fluid rounded shadow" alt="Gallery Image"></div>
+        <div class="col-md-4"><img src="images/wedding decor.jpg" class="img-fluid rounded shadow" alt="Gallery Image"></div>
+        <div class="col-md-4"><img src="images/wed1.44.jpg" class="img-fluid rounded shadow" alt="Gallery Image"></div>
+        <div class="col-md-4"><img src="images/baby-shower-grand-decoration-500x500.webp" class="img-fluid rounded shadow" alt="Gallery Image"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section id="newsletter" class="py-5 text-center text-white">
+    <div class="container">
+      <h3 class="fw-bold">Stay Connected with EventHub</h3>
+      <p class="mb-4">Subscribe to our newsletter and get the latest updates & offers.</p>
+      <form class="row justify-content-center">
+        <div class="col-md-6 col-sm-8">
+          <div class="input-group">
+            <input type="email" class="form-control rounded-start" placeholder="Enter your email" required>
+            <button class="btn btn-warning rounded-end">Subscribe</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h5>EventHub</h5>
+          <p>Crafting unforgettable weddings, parties, and corporate events with care and creativity.</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>Follow Us</h5>
+          <div class="social-icons">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="bg-light">
+      <div class="text-center small">
+        &copy; 2025 <strong>EventHub</strong> | All Rights Reserved
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+>>>>>>> 82635cc7984a0e470e5818a832cb1365a22cc2b6
