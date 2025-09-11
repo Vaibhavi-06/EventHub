@@ -96,6 +96,58 @@
       color: #4b1e0d;
       border-color: #ffcc00;
     }
+     .cta-section {
+      background: linear-gradient(rgba(75, 30, 13, 0.85), rgba(75, 30, 13, 0.85)), url('images/event background1.jpg') no-repeat center center/cover;
+      color: #fff;
+    }
+
+    .cta-section h3 {
+      color: #ffcc00;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+    /* Ensure both map and image have same height */
+.row.align-items-stretch > .col-md-6 {
+  display: flex;
+  flex-direction: column;
+}
+
+.map-section iframe,
+.contact-img {
+  flex: 1; /* Make them stretch equally */
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* Hover Animation */
+.animate-element:hover iframe,
+.animate-element:hover .contact-img {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Optional: Scroll Animation using Intersection Observer */
+.animate-element {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.animate-element.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+#newsletter {
+      background: #4b1e0d;
+    }
+  #newsletter {
+      background: #4b1e0d;
+    }
+    
+    
+  
+    
+
+
+
   </style>
 </head>
 <body>
@@ -115,6 +167,7 @@
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+           <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
           <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
           <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
         </ul>
@@ -137,7 +190,7 @@
         <!-- Contact Info -->
         <div class="col-md-5">
           <h2 class="fw-bold mb-4 text-dark">Get in Touch</h2>
-          <p class="mb-3 contact-info"><i class="bi bi-geo-alt-fill"></i> Pune, Maharashtra, India</p>
+          <p class="mb-3 contact-info"><i class="bi bi-geo-alt-fill"></i> Nashik, Maharashtra, India</p>
           <p class="mb-3 contact-info"><i class="bi bi-telephone-fill"></i> +91 9876543210</p>
           <p class="mb-3 contact-info"><i class="bi bi-envelope-fill"></i> contact@eventhub.com</p>
           <p class="mb-3 contact-info"><i class="bi bi-clock-fill"></i> Mon - Sat: 9:00 AM - 7:00 PM</p>
@@ -171,27 +224,48 @@
     </div>
   </section>
 
-  <!-- Map + Image Section -->
-  <section class="py-5 bg-light">
-    <div class="container">
-      <div class="row g-4 align-items-center">
-        <!-- Google Map -->
-        <div class="col-md-6 map-section">
-          <h3 class="fw-bold mb-3 text-dark">Find Us Here</h3>
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.5941437392783!2d73.85674357496267!3d18.52043017129962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c06a5c6a3cfd%3A0x6ed3a5c3a1f97dd5!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1694200000000!5m2!1sen!2sin" 
-            width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
-          </iframe>
-        </div>
-        <!-- Contact Image -->
-        <div class="col-md-6">
-          <h3 class="fw-bold mb-3 text-dark">Our Workspace</h3>
-          <img src="images/" alt="EventHub Office" class="img-fluid contact-img">
-        </div>
+  <hr style="border: 4px solid  #4b1e0d; margin: 40px 0;">
+
+
+<!-- Map + Image Section -->
+<section class="py-5" style="background-color:#fdf3e7;">
+  <div class="container">
+    <div class="row g-4 align-items-stretch">
+      <!-- Google Map -->
+      <div class="col-md-6 map-section animate-element">
+        <h3 class="fw-bold mb-3" style="color:#4b1e0d;">Find Us Here</h3>
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.5941437392783!2d73.85674357496267!3d18.52043017129962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c06a5c6a3cfd%3A0x6ed3a5c3a1f97dd5!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1694200000000!5m2!1sen!2sin" 
+          class="w-100 h-100 rounded shadow" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
       </div>
+      <!-- Contact Image -->
+      <div class="col-md-6 animate-element">
+        <h3 class="fw-bold mb-3" style="color:#4b1e0d;">Connect with us our office.!</h3>
+        <img src="images/work place.jpg" alt="EventHub Office" class="img-fluid rounded shadow w-100 h-100 object-fit-cover contact-img">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Newsletter Section -->
+  <section id="newsletter" class="py-5 text-center text-white">
+    <div class="container">
+      <h3 class="fw-bold" >Stay Connected with EventHub</h3>
+      <p class="mb-4">Subscribe to our newsletter and get the latest updates & offers.</p>
+      <form class="row justify-content-center">
+        <div class="col-md-6 col-sm-8">
+          <div class="input-group">
+            <input type="email" class="form-control rounded-start" placeholder="Enter your email" required>
+            <button class="btn btn-warning rounded-end">Subscribe</button>
+          </div>
+        </div>
+      </form>
     </div>
   </section>
 
+   
   <!-- Footer -->
   <footer>
     <div class="container">
@@ -228,5 +302,18 @@
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+// Scroll Animation
+const elements = document.querySelectorAll('.animate-element');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+elements.forEach(el => observer.observe(el));
+</script>
 </body>
 </html>
