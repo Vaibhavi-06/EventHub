@@ -160,6 +160,7 @@
     }
 
     .offer-card {
+      position: relative;
       background: #fff;
       border-radius: 15px;
       padding: 25px;
@@ -181,6 +182,50 @@
     .offer-card p {
       color: #555;
       font-size: 1rem;
+    }
+
+    /* Ribbon */
+    .ribbon {
+      width: 120px;
+      background: #ff4d4d;
+      color: #fff;
+      text-align: center;
+      line-height: 28px;
+      position: absolute;
+      top: 20px;
+      right: -35px;
+      transform: rotate(45deg);
+      font-weight: bold;
+      font-size: 0.9rem;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    }
+
+    /* Countdown */
+    .countdown-box {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .countdown-item {
+      background: #f8f9fa;
+      padding: 8px 12px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .countdown-item span {
+      display: block;
+      font-size: 18px;
+      font-weight: bold;
+      color: #e67e22;
+    }
+
+    .countdown-item small {
+      font-size: 11px;
+      color: #555;
     }
 
     /* CTA Section */
@@ -250,12 +295,10 @@
     footer a:hover {
       color: #ffcc00;
     }
-
   </style>
 </head>
 
 <body>
-
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
     <div class="container">
@@ -270,10 +313,11 @@
 
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-          <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
       </div>
@@ -289,7 +333,6 @@
   <!-- Services Grid -->
   <section class="container py-5">
     <div class="row g-4">
-      <!-- Service 1 -->
       <div class="col-md-4">
         <div class="service-card">
           <img src="images/Bride back image1.jpeg" alt="Wedding">
@@ -301,7 +344,6 @@
           </div>
         </div>
       </div>
-      <!-- Service 2 -->
       <div class="col-md-4">
         <div class="service-card">
           <img src="images/c.22.jpg" alt="Corporate">
@@ -313,7 +355,6 @@
           </div>
         </div>
       </div>
-      <!-- Service 3 -->
       <div class="col-md-4">
         <div class="service-card">
           <img src="images/bday1.jpg" alt="Birthday">
@@ -325,68 +366,60 @@
           </div>
         </div>
       </div>
-      <!-- Service 4 -->
-      <div class="col-md-4">
-        <div class="service-card">
-          <img src="images/slid6.jpg" alt="Celebrity Events">
-          <div class="service-card-body">
-            <i class="fa-solid fa-star service-icon"></i>
-            <h3>Celebrity Events</h3>
-            <p>Host events with stars, live bands, and influencers for maximum impact.</p>
-            <a href="contact.html" class="btn">Book Now</a>
-          </div>
-        </div>
-      </div>
-      <!-- Service 5 -->
-      <div class="col-md-4">
-        <div class="service-card">
-          <img src="images/slide 7.jpg" alt="Educational Events">
-          <div class="service-card-body">
-            <i class="fa-solid fa-graduation-cap service-icon"></i>
-            <h3>Educational Events</h3>
-            <p>Organizing workshops, seminars, and various cultural programs seamlessly.</p>
-            <a href="contact.html" class="btn">Book Now</a>
-          </div>
-        </div>
-      </div>
-      <!-- Service 6 -->
-      <div class="col-md-4">
-        <div class="service-card">
-          <img src="images/baby-shower-grand-decoration-500x500.webp" alt="Baby Showers">
-          <div class="service-card-body">
-            <i class="fa-solid fa-baby service-icon"></i>
-            <h3>Baby Showers</h3>
-            <p>Creating warm, beautiful, and memorable celebrations for families.</p>
-            <a href="contact.html" class="btn">Book Now</a>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
   <!-- Upcoming Offers Section -->
   <section class="offers-section">
     <div class="container">
-      <h2>Upcoming Offers</h2>
+      <h2>🔥 Upcoming Offers</h2>
       <div class="row">
+
+        <!-- Offer 1 -->
         <div class="col-md-4">
           <div class="offer-card">
+            <div class="ribbon">HOT</div>
             <h4>Wedding Package - 20% OFF</h4>
-            <p>Book your dream wedding with us this month and enjoy 20% discount on decoration.</p>
+            <p>Book your dream wedding this month and get 20% off on decoration.</p>
+            <div class="countdown-box">
+              <div class="countdown-item"><span id="days1">05</span><small>Days</small></div>
+              <div class="countdown-item"><span id="hours1">12</span><small>Hours</small></div>
+              <div class="countdown-item"><span id="minutes1">45</span><small>Minutes</small></div>
+              <div class="countdown-item"><span id="seconds1">00</span><small>Seconds</small></div>
+            </div>
           </div>
         </div>
+
+        <!-- Offer 2 -->
         <div class="col-md-4">
           <div class="offer-card">
+            <div class="ribbon" style="background:#28a745;">NEW</div>
             <h4>Birthday Bash Offer</h4>
-            <p>Plan your birthday party with EventHub and get a free customized cake with every package booking.</p>
+            <p>Plan your birthday party and get a free customized cake with every package.</p>
+            <div class="countdown-box">
+              <div class="countdown-item"><span id="days2">02</span><small>Days</small></div>
+              <div class="countdown-item"><span id="hours2">08</span><small>Hours</small></div>
+              <div class="countdown-item"><span id="minutes2">30</span><small>Minutes</small></div>
+              <div class="countdown-item"><span id="seconds2">00</span><small>Seconds</small></div>
+            </div>
           </div>
         </div>
+
+        <!-- Offer 3 -->
         <div class="col-md-4">
           <div class="offer-card">
-            <h4>Corporate Events Deal</h4>
-            <p>Special discounts on bulk corporate bookings! Book 2 events and get 1 seminar setup free.</p>
+            <div class="ribbon" style="background:#ff9900;">TRENDING</div>
+            <h4>Corporate Deal</h4>
+            <p>Book 2 events and get 1 seminar setup free. Perfect for bulk bookings!</p>
+            <div class="countdown-box">
+              <div class="countdown-item"><span id="days3">07</span><small>Days</small></div>
+              <div class="countdown-item"><span id="hours3">15</span><small>Hours</small></div>
+              <div class="countdown-item"><span id="minutes3">20</span><small>Minutes</small></div>
+              <div class="countdown-item"><span id="seconds3">00</span><small>Seconds</small></div>
+            </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -397,7 +430,8 @@
     <p>Contact us today and make your occasion extraordinary with EventHub.</p>
     <a href="contact.html" class="btn">Get In Touch</a>
   </section>
-<!-- Footer -->
+
+  <!-- Footer -->
   <footer>
     <div class="container">
       <div class="row">
@@ -435,5 +469,41 @@
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+  <!-- Countdown Script -->
+  <script>
+    const offer1EndDate = new Date("Sep 20, 2025 23:59:59").getTime();
+    const offer2EndDate = new Date("Sep 18, 2025 23:59:59").getTime();
+    const offer3EndDate = new Date("Sep 25, 2025 23:59:59").getTime();
+
+    function startCountdown(endDate, daysId, hoursId, minutesId, secondsId) {
+      return setInterval(() => {
+        const now = new Date().getTime();
+        const distance = endDate - now;
+
+        if (distance < 0) {
+          clearInterval(this);
+          document.getElementById(daysId).innerHTML = "0";
+          document.getElementById(hoursId).innerHTML = "0";
+          document.getElementById(minutesId).innerHTML = "0";
+          document.getElementById(secondsId).innerHTML = "0";
+          return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById(daysId).innerHTML = days;
+        document.getElementById(hoursId).innerHTML = hours;
+        document.getElementById(minutesId).innerHTML = minutes;
+        document.getElementById(secondsId).innerHTML = seconds;
+      }, 1000);
+    }
+
+    startCountdown(offer1EndDate, "days1", "hours1", "minutes1", "seconds1");
+    startCountdown(offer2EndDate, "days2", "hours2", "minutes2", "seconds2");
+    startCountdown(offer3EndDate, "days3", "hours3", "minutes3", "seconds3");
+  </script>
 </body>
 </html>
