@@ -10,6 +10,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!--Bootstrap Logo-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
 
   <style>
     body {
@@ -21,18 +23,22 @@
 
     /* Navbar */
     .navbar {
-      transition: all 0.4s ease;
-      background: rgba(0, 0, 0, 0.85);
-      backdrop-filter: blur(6px);
+      background-color: #4b1e0d !important;
     }
 
-    .navbar.scrolled {
-      background: rgba(0, 0, 0, 0.95);
+    .navbar-brand img {
+      border-radius: 5px;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.4rem;
+      color: #fff !important;
     }
 
     /* Hero Section */
     .services-hero {
-      background: url("images/elegant-blue-gold-banner.jpg") center/cover no-repeat;
+      background: url("images/event1.jpg") center/cover no-repeat;
       height: 60vh;
       color: white;
       text-align: center;
@@ -140,15 +146,51 @@
       transform: scale(1.05);
     }
 
-    /* CTA Section */
-    .cta-section {
-    background: url("https://images.unsplash.com/photo-1529634899531-2a8c9a4a58d1") center/cover fixed no-repeat;
-    padding: 80px 20px;
-    text-align: center;
-    color: #fff;
-    position: relative;
+    /* Upcoming Offers */
+    .offers-section {
+      background: #fff3e6;
+      padding: 70px 20px;
+      text-align: center;
     }
 
+    .offers-section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+      color: #4b1e0d;
+    }
+
+    .offer-card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 25px;
+      margin: 15px 0;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .offer-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .offer-card h4 {
+      color: #e67e22;
+      margin-bottom: 10px;
+    }
+
+    .offer-card p {
+      color: #555;
+      font-size: 1rem;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: url('images/event background1.jpg') center/cover fixed no-repeat;
+      padding: 80px 20px;
+      text-align: center;
+      color: #fff;
+      position: relative;
+    }
 
     .cta-section::before {
       content: "";
@@ -188,24 +230,27 @@
 
     /* Footer */
     footer {
-      background: #222;
-      color: #bbb;
-      padding: 25px 0;
-      text-align: center;
-      margin-top: 40px;
+      background: #2c1b0e;
+      color: #fff;
+      padding: 40px 0 20px 0;
+    }
+
+    footer h5 {
+      color: #ffcc00;
+      margin-bottom: 15px;
     }
 
     footer a {
-      color: #bbb;
-      transition: all 0.3s ease;
-      margin: 0 10px;
-      display: inline-block;
+      color: #fff;
+      text-decoration: none;
+      margin: 0 5px;
+      transition: 0.3s;
     }
 
     footer a:hover {
-      color: #e67e22;
-      transform: scale(1.2);
+      color: #ffcc00;
     }
+
   </style>
 </head>
 
@@ -228,7 +273,7 @@
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
           <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
       </div>
@@ -275,12 +320,11 @@
           <div class="service-card-body">
             <i class="fa-solid fa-cake-candles service-icon"></i>
             <h3>Birthday Parties</h3>
-            <p>Fun-filled, creative and personalized birthday celebrations for all ages.</p>
+            <p>Creative and personalized birthday celebrations for all ages.</p>
             <a href="contact.html" class="btn">Book Now</a>
           </div>
         </div>
       </div>
-
       <!-- Service 4 -->
       <div class="col-md-4">
         <div class="service-card">
@@ -293,7 +337,6 @@
           </div>
         </div>
       </div>
-
       <!-- Service 5 -->
       <div class="col-md-4">
         <div class="service-card">
@@ -306,7 +349,6 @@
           </div>
         </div>
       </div>
-
       <!-- Service 6 -->
       <div class="col-md-4">
         <div class="service-card">
@@ -322,32 +364,32 @@
     </div>
   </section>
 
-  <section class="py-5 bg-light">
-  <div class="container text-center">
-    <h2 class="mb-4">🎉 Upcoming Offers</h2>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card shadow border-0">
-          <div class="card-body">
-            <h5 class="card-title">Wedding Packages</h5>
-            <p class="card-text">Flat 20% OFF on premium décor bookings before Diwali.</p>
-            <span class="badge bg-success">Limited Time</span>
+  <!-- Upcoming Offers Section -->
+  <section class="offers-section">
+    <div class="container">
+      <h2>Upcoming Offers</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="offer-card">
+            <h4>Wedding Package - 20% OFF</h4>
+            <p>Book your dream wedding with us this month and enjoy 20% discount on decoration.</p>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card shadow border-0">
-          <div class="card-body">
-            <h5 class="card-title">Corporate Events</h5>
-            <p class="card-text">Book 2 events & get the 3rd at 50% OFF.</p>
-            <span class="badge bg-danger">Hot Deal</span>
+        <div class="col-md-4">
+          <div class="offer-card">
+            <h4>Birthday Bash Offer</h4>
+            <p>Plan your birthday party with EventHub and get a free customized cake with every package booking.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="offer-card">
+            <h4>Corporate Events Deal</h4>
+            <p>Special discounts on bulk corporate bookings! Book 2 events and get 1 seminar setup free.</p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-
+  </section>
 
   <!-- Call To Action -->
   <section class="cta-section">
@@ -355,19 +397,43 @@
     <p>Contact us today and make your occasion extraordinary with EventHub.</p>
     <a href="contact.html" class="btn">Get In Touch</a>
   </section>
-
-  <!-- Footer -->
+<!-- Footer -->
   <footer>
-    <p>&copy; 2025 EventHub | All Rights Reserved</p>
-    <p>
-      <a href="#"><i class="fab fa-facebook fa-lg"></i></a>
-      <a href="#"><i class="fab fa-instagram fa-lg"></i></a>
-      <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
-    </p>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h5>EventHub</h5>
+          <p>Crafting unforgettable weddings, parties, and corporate events with care and creativity.</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>Follow Us</h5>
+          <div class="social-icons">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="bg-light">
+      <div class="text-center small">
+        &copy; 2025 <strong>EventHub</strong> | All Rights Reserved
+      </div>
+    </div>
   </footer>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  
+
 </body>
 </html>

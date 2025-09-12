@@ -18,20 +18,45 @@
   <style>
        /* Footer */
     footer {
-      background: linear-gradient(to right, #111, #222);
-      color: #bbb;
-      padding: 25px 0;
-      text-align: center;
-    }
-    footer a {
-      color: #f8c94e;
-      margin: 0 10px;
-      text-decoration: none;
-    }
-    footer a:hover {
+      background: #2c1b0e;
       color: #fff;
+      padding: 40px 0 20px 0;
+
+    }
+    
+
+    footer h5 {
+      color: #ffcc00;
+      margin-bottom: 15px;
     }
 
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 5px;
+      transition: 0.3s;
+    }
+
+    footer a:hover {
+      color: #ffcc00;
+    }
+
+    .social-icons a {
+      font-size: 1.2rem;
+      display: inline-block;
+      margin-right: 10px;
+      color: #fff;
+      border: 1px solid #fff;
+      padding: 8px 10px;
+      border-radius: 50%;
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      background: #ffcc00;
+      color: #4b1e0d;
+      border-color: #ffcc00;
+    }
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -49,6 +74,7 @@
       transition: transform 0.5s ease, box-shadow 0.5s ease;
       cursor: pointer;
       border-radius: 10px;
+      
       
       /* optional */
     }
@@ -469,8 +495,32 @@ html {
 #gallery {
   scroll-margin-top: 80px; /* adjust based on your navbar height */
   padding-top: 20px;
+  font-size: 2.8rem;
+  color:#4b1e0d;
+ margin-bottom: 15px;
+}
+ .navbar {
+      background-color: #4b1e0d !important;
+    }
+
+.event-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
+.event-card::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border: 3px solid transparent;
+  border-radius: 10px;
+  transition: border-color 0.3s ease;
+}
+
+.event-card:hover::after {
+  border-color: #ff0000; /* Red border on hover */
+}
 
 
  
@@ -483,7 +533,7 @@ html {
 <body>
 
   <!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top ">
 
   <div class="container">
     <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
@@ -498,9 +548,10 @@ html {
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link  active" href="#about">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+         <li class="nav-item"><a class="nav-link"  href="faq.html">FAQ</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
     </div>
@@ -738,11 +789,11 @@ html {
 
 <!--gallary-->
 <section id="gallery" class="gallary about-heading">
-  <h2 style="display: inline-block; border-bottom: 2px solid red;">Gallery</h2>
-  <p>See some of our latest works and events.</p>
+  <h2 style="display: inline-block; border-bottom: 2px solid red;" class="heading fw-bold mb-4"><em>Gallery</em></h2>
+  <p><em>See some of our latest works and events</em>.</p>
 </section>
 
-  </MAIN>
+ 
 <!-- Gallery Section -->
   <section class="container mt-5">
     
@@ -812,7 +863,9 @@ html {
           </div>
         </div>
       </div>
-      <!-- Gallery Section -->
+    </section>
+
+      <!-- birthaday Gallery Section -->
   <section class="container mt-5">
     
     <h1 class="about-heading fw-bold mb-4 p-3";>Birthday parties</h1>
@@ -846,6 +899,7 @@ html {
           </div>
         </div>
       </div>
+    </section>
 
  <!-- Gallery Section -->
   <section class="container mt-5">
@@ -875,6 +929,9 @@ html {
         </div>
       </div>
     </div>  
+    </section>
+
+
 <hr style="border: 4px solid  #4b1e0d; margin: 40px 0 ;">
 <!-- Stats with Counter -->
 <section class="stats-section">
@@ -929,15 +986,44 @@ html {
 
 
  
-  <!-- Footer -->
-<footer>
-    <p>&copy; 2025 EventHub | All Rights Reserved</p>
-    <p>
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-    </p>
-  </footer>
+
+
+
+<!-- Footer -->
+<footer class="footer-fluid w-100">
+  <div class="container-fluid py-5" style="background: #2c1b0e; color: #fff;">
+    <div class="row px-3">
+      <div class="col-md-4 mb-3">
+        <h5 style="color:#ffcc00;">EventHub</h5>
+        <p>Crafting unforgettable weddings, parties, and corporate events with care and creativity.</p>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h5 style="color:#ffcc00;">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" style="color:#fff;">Home</a></li>
+          <li><a href="about.html" style="color:#fff;">About</a></li>
+          <li><a href="services.html" style="color:#fff;">Services</a></li>
+          <li><a href="events.html" style="color:#fff;">Events</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html" style="color:#fff;">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h5 style="color:#ffcc00;">Follow Us</h5>
+        <div class="social-icons">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="bg-light">
+    <div class="text-center small mt-3">
+      &copy; 2025 <strong>EventHub</strong> | All Rights Reserved
+    </div>
+  </div>
+</footer>
+
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
