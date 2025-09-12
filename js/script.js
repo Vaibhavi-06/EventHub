@@ -2,4 +2,4 @@
 function showMeg1(){
     alert("your order is confirmd");
 }
-  
+ 
