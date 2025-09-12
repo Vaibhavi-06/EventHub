@@ -9,6 +9,10 @@
     <!--Bootstrap CSS-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+        <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
         
 
     <!--Internal CSS-->
@@ -139,43 +143,9 @@ footer {
     .lead {
       /* color: #302913;*/
       color: rgb(58, 2, 2);
-      font-size: 20px;
+      font-size: 40px;
       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
-
-    .bi-plus {
-      color: rgb(42, 32, 52);
-      /*background-color: #f7eccb;*/
-      font-size: 50px;
-      text-align: right;
-      position: absolute;
-      left: 230px;
-      bottom: 110px;
-
-
-    }
-
-    .modal-content {
-      background-color: #f7eccb;
-      /* rgb(42,32,52)  dark beige #a58d5d,,,#B6855A;*/
-    }
-
-    .modal-header {
-      background-color: #302913;
-    }
-
-    .modal-title {
-      color: #f7eccb;
-      font-family: Georgia, 'Times New Roman', Times, serif;
-      text-align: center;
-      font-size: 10px;
-    }
-
-    .modal-footer {
-
-      background-color: #302913;
-    }
-
     .cord {
       transition: 0.5s;
       flex-basis: 50%;
@@ -195,7 +165,7 @@ footer {
       animation: pulse 0.8s ease-in-out;
     }
 
-    @keyframes pulse {
+   /* @keyframes pulse {
       0% {
         transform: scale(1);
       }
@@ -207,7 +177,7 @@ footer {
       100% {
         transform: scale(1);
       }
-    }
+    }*/
 
     .card {
       transition: transform 0.6s ease, box-shadow 0.6s ease;
@@ -225,7 +195,7 @@ footer {
 
     .text {
       color: #3a2701;
-      font-size: 40px;
+      font-size: 20px;
       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
 
@@ -265,7 +235,35 @@ footer {
       background-color:#f7eccb ;
     }
 
+  
+.swiper {
+  width: 100%;
+  padding: 5px 0;
+  margin-top: -5px;
+}
+
+.swiper-slide {
+  text-align: center;
+  padding-top: -50px;
+  padding-bottom: 50px 10px;
    
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  
+}
+.swiper-wrapper{
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+border: 20px;
+border-color: black;
+}
+h6{
+  color: #3a2701;
+  margin-top: 5;
+}
   </style>
 </head>
 
@@ -321,14 +319,87 @@ footer {
   <!-- Background text Section -->
   <section class="py-2 text-box">
     <div class="container text-center ">
-      <h2 class="text mb-2">FABULOUS PLACE TO MAKE UNFORGETABLE MEMORIES</h2>
-      <p class="lead ">Birthday Celebration Collection</p>   <!--&#127874;<i classg="bi bi-balloon-fill"></i>-->
+      <h2 class="text mb-5">FABULOUS PLACE TO MAKE UNFORGETABLE MEMORIES</h2>
+     <marquee direction="rightleft" scrollamount="15"  behavior="alternate" <p class="lead ">Birthday Celebration Collection</p> </marquee > <!--&#127874;<i classg="bi bi-balloon-fill"></i>-->
     </div>
     </section>
+    
     <!--Birthday Card Section-->
-    <marquee scrollamount="15" behavior="" darection="right"
+   <!---<marquee scrollamount="15" behavior="" darection="right"-->
    <section class=" birth ">
-      <div class="container text-center">
+      
+
+    <section class="birth py-5">
+ <!--- <div class="container text-center mb-4">-->
+    <!--<h2 class="text-wed mb-4">Birthday Event Collection</h2>-->
+
+    <!-- Swiper Container -->
+    <div class="swiper mySwiper ">
+      <div class="swiper-wrapper">
+
+        <!-- Slides (cards/images) -->
+        <div class="swiper-slide ">
+          <img src="images/bday7.webp" class="img-fluid rounded" alt="Golden Glow">
+          <h6>Golden Glow Balloon</h6>
+           <p class="card-text">“Celebrate in style with our Golden Glow Balloon Décor.A touch of elegance, a
+                  sparkle of joy,and a golden shine.” </p>
+        </div>
+
+        <div class="swiper-slide">
+          <img src="images/bday6.webp" class="img-fluid rounded" alt="Chocolate Brown">
+          <h6>Chocolate Brown Balloon</h6>
+           <p class="card-text">Elegant shades of chocolate brown,bringing sweetness and style together,for a
+                  birthday full of charm.</p>
+        </div>
+
+        <div class="swiper-slide">
+          <img src="images/bday33.webp" class="img-fluid rounded" alt="Pink Strawberry">
+          <h6>Pink Strawberry</h6>
+          <p class="card-text">Blush pink and strawberry charm,adding sweetness to every corner,making your party
+                  bloom with joy. </p>
+        </div>
+
+        <div class="swiper-slide">
+          <img src="images/ultimate-happy-birthday-balloon-kit-diy-kit.webp" class="img-fluid rounded" alt="Royal Blue">
+          <h6>Royal Blue Birthday</h6>
+          <p class="card-text">Celebrate in shades of royal blue,a décor that feels bold and elegant,perfect for
+                  birthdays full of grandeur. </p>
+        </div>
+
+        <div class="swiper-slide">
+          <img src="images/luxuri big.jpeg" class="img-fluid rounded" alt="Sparkling Theme">
+          <h6>Sparkling Theme</h6>
+          <p class="card-text">Step Into Pure Luxury Celebrate With Grandeur & Style A Venue Fit For Royal Moments Where Every Detail Shines Bright </p>
+                
+        </div>
+
+        <div class="swiper-slide">
+          <img src="images/bday pink dec.jpeg" class="img-fluid rounded" alt="Red Gold">
+          <h6>Red Gold Theme</h6>
+          <p class="card-text">Celebrate in Shades of Pink  Where Elegance Meets Joy A Perfect Birthday Setup Memories Made Beautiful </p>
+                
+        </div>
+
+      </div>
+
+      <!-- Pagination (dots) 
+      <div class="swiper-pagination"></div>-->
+    </div>
+  </div>
+</section>
+
+
+    
+
+        
+       
+
+
+    
+
+      
+
+      <!--<div class="container text-center">
         <div class="row">
           <div class="col-md-3">
             <div class="card " style="width: 18rem;">
@@ -377,17 +448,91 @@ footer {
                 
               </div>
             </div>
-          </div>
+          </div>-->
           
         
     </section>
-     </marquee>
+     <!--</marquee>-->
 
     <!--Wedding Section Start-->
+
+
+    <section class=" wed mb-5 ">
+    <section class="wed py-5 mb-5">
+  <!--<div class="container text-center mb-4">
+    <h2 class="text-wed mb-4">Birthday Event Collection</h2>-->
+    <marquee direction="rightleft" scrollamount="15"  behavior="alternate" <p class="lead ">Wedding Event Collection</p> </marquee > 
+
+    <!-- Swiper Container -->
+    <div class="swiper mySwiper mt-2 ">
+      <div class="swiper-wrapper">
+
+        <!-- Slides (cards/images) -->
+        <div class="swiper-slide ">
+          <img src="images/Elegant .jpg" class="img-fluid rounded" alt="Golden Glow">
+          <h6>Golden Glow Balloon</h6>
+           <p class="card-text">“Celebrate in style with our Golden Glow Balloon Décor.A touch of elegance, a
+                  sparkle of joy,and a golden shine.” </p>
+        </div>
+
+        <div class="swiper-slide">
+          <img src="images/wed01.jpg" class="img-fluid rounded" alt="Chocolate Brown">
+          <h6>Chocolate Brown Balloon</h6>
+           <p class="card-text">Elegant shades of chocolate brown,bringing sweetness and style together,for a
+                  birthday full of charm.</p>
+        </div>
+
+        <div class="swiper-slide">
+          <img src="images/wed1.66.jpg" class="img-fluid rounded" alt="Pink Strawberry">
+          <h6>Pink Strawberry</h6>
+          <p class="card-text">Blush pink and strawberry charm,adding sweetness to every corner,making your party
+                  bloom with joy. </p>
+        </div>
+
+        <div class="swiper-slide">
+          <img src="images/wed4.4.jpg" class="img-fluid rounded" alt="Royal Blue">
+          <h6>Royal Blue Birthday</h6>
+          <p class="card-text">Celebrate in shades of royal blue,a décor that feels bold and elegant,perfect for
+                  birthdays full of grandeur. </p>
+        </div>
+
+        <div class="swiper-slide">
+          <img src="images/wedding pck2 (1).jpeg" class="img-fluid rounded" alt="Sparkling Theme">
+          <h6>Sparkling Theme</h6>
+          <p class="card-text">Step Into Pure Luxury Celebrate With Grandeur & Style A Venue Fit For Royal Moments Where Every Detail Shines Bright </p>
+                
+        </div>
+
+        <div class="swiper-slide">
+          <img src="images/wdpicccc.jpeg" class="img-fluid rounded" alt="Red Gold">
+          <h6>Red Gold Theme</h6>
+          <p class="card-text">Celebrate in Shades of Pink  Where Elegance Meets Joy A Perfect Birthday Setup Memories Made Beautiful </p>
+                
+        </div>
+
+      </div>
+
+      <!-- Pagination (dots) 
+      <div class="swiper-pagination"></div>-->
+    </div>
+  </div>
+</section>
+
+
+    
+
+        
+       
+
+
+    
+
+      
+
  
-    <section class=" wed ">    <!--mt-5 mb-3-->
-      <div class="container  text-center">  <!--mt-3 mb-3-->
-        <h2 class="text-wed mb-5">Wedding Event Collection</h2>
+    <!--<section class=" wed ">    <!--mt-5 mb-3
+      <div class="container  text-center">  <!--mt-3 mb-3
+        <marquee direction="rightleft" scrollamount="15"  behavior="alternate" <h2 class="text-wed mb-5">Wedding Event Collection</h2></marquee>
         
         <div class="row justify-content-center">
           <div class="col-md-3">
@@ -442,11 +587,74 @@ footer {
     </section>
      
 
-    <!--Wedding Section End-->
+    Wedding Section End-->
 
     <!--carporate event section start-->
 
-    <section class="mt-5 mb-3">
+   
+     <section class=" cor ">
+    <section class="cor ">
+  <!--<div class="container text-center mb-4">
+    <h2 class="text-wed mb-4">Birthday Event Collection</h2>-->
+    <marquee direction="rightleft" scrollamount="15"  behavior="alternate" <p class="lead ">Corporate Event Collection</p> </marquee > 
+
+    <!-- Swiper Container -->
+    <div class="swiper mySwiper mt-2 ">
+      <div class="swiper-wrapper">
+
+        <!-- Slides (cards/images) -->
+        <div class="swiper-slide ">
+          <img src="images/c77.jpg" class="img-fluid rounded" alt="Golden Glow">
+          <h6>Golden Glow Balloon</h6>
+           <p class="card-text">“Celebrate in style with our Golden Glow Balloon Décor.A touch of elegance, a
+                  sparkle of joy,and a golden shine.” </p>
+        </div>
+
+        <div class="swiper-slide">
+          <img src="images/c.33.jpg" class="img-fluid rounded" alt="Chocolate Brown">
+          <h6>Chocolate Brown Balloon</h6>
+           <p class="card-text">Elegant shades of chocolate brown,bringing sweetness and style together,for a
+                  birthday full of charm.</p>
+        </div>
+
+        <div class="swiper-slide">
+          <img src="images/c.22.jpg" class="img-fluid rounded" alt="Pink Strawberry">
+          <h6>Pink Strawberry</h6>
+          <p class="card-text">Blush pink and strawberry charm,adding sweetness to every corner,making your party
+                  bloom with joy. </p>
+        </div>
+
+        <div class="swiper-slide">
+          <img src="images/c11.jpg" class="img-fluid rounded" alt="Royal Blue">
+          <h6>Royal Blue Birthday</h6>
+          <p class="card-text">Celebrate in shades of royal blue,a décor that feels bold and elegant,perfect for
+                  birthdays full of grandeur. </p>
+        </div>
+
+        <div class="swiper-slide">
+          <img src="images/cedpck2.jpeg" class="img-fluid rounded" alt="Sparkling Theme">
+          <h6>Sparkling Theme</h6>
+          <p class="card-text">Step Into Pure Luxury Celebrate With Grandeur & Style A Venue Fit For Royal Moments Where Every Detail Shines Bright </p>
+                
+        </div>
+
+        <div class="swiper-slide">
+          <img src="images/cedpck1.jpeg" class="img-fluid rounded" alt="Red Gold">
+          <h6>Red Gold Theme</h6>
+          <p class="card-text">Celebrate in Shades of Pink  Where Elegance Meets Joy A Perfect Birthday Setup Memories Made Beautiful </p>
+                
+        </div>
+
+      </div>
+
+      <!-- Pagination (dots) 
+      <div class="swiper-pagination"></div>-->
+    </div>
+  </div>
+</section>
+
+
+    <!--<section class="mt-5 mb-3">
       <div class="container mt-3 mb-3 text-center">
         <h2 class="text-wed mb-5">Corporate Event Collection</h2>
         <div class="row">
@@ -549,6 +757,65 @@ footer {
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+ /* var swiper = new Swiper(".mySwiper", {
+  slidesPerView: "auto",  
+  spaceBetween: 20,       
+  loop: true,
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 4,      // ek sath 4 images
+  spaceBetween: 20,      // thoda gap
+  loop: true,            // infinite loop
+  autoplay: {
+    delay: 2000,         // speed
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    320: { slidesPerView: 1 },   // Mobile
+    768: { slidesPerView: 2 },   // Tablet
+    1024: { slidesPerView: 4 }   // Desktop
+  }
+});*/
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 4,
+  spaceBetween: 20,
+  loop: true,
+  speed: 1200,
+  autoplay: {
+    delay: 1500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,  // dots clickable honge
+  },
+  breakpoints: {
+    320: { slidesPerView: 1 },
+    768: { slidesPerView: 2 },
+    1024: { slidesPerView: 4 }
+  }
+});
+
+
+
+</script>
+
+
 </body>
 
 </html>
