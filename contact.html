@@ -21,7 +21,6 @@
       font-size: 1.4rem;
       color: #fff !important;
     }
-    /* Banner section */
     .contact-header {
       position: relative;
       height: 50vh;
@@ -96,58 +95,40 @@
       color: #4b1e0d;
       border-color: #ffcc00;
     }
-     .cta-section {
+    .cta-section {
       background: linear-gradient(rgba(75, 30, 13, 0.85), rgba(75, 30, 13, 0.85)), url('images/event background1.jpg') no-repeat center center/cover;
       color: #fff;
     }
-
     .cta-section h3 {
       color: #ffcc00;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
-    /* Ensure both map and image have same height */
-.row.align-items-stretch > .col-md-6 {
-  display: flex;
-  flex-direction: column;
-}
-
-.map-section iframe,
-.contact-img {
-  flex: 1; /* Make them stretch equally */
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-}
-
-/* Hover Animation */
-.animate-element:hover iframe,
-.animate-element:hover .contact-img {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-
-/* Optional: Scroll Animation using Intersection Observer */
-.animate-element {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.8s ease-out;
-}
-
-.animate-element.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-#newsletter {
+    .row.align-items-stretch > .col-md-6 {
+      display: flex;
+      flex-direction: column;
+    }
+    .map-section iframe,
+    .contact-img {
+      flex: 1;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+    .animate-element:hover iframe,
+    .animate-element:hover .contact-img {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    .animate-element {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s ease-out;
+    }
+    .animate-element.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    #newsletter {
       background: #4b1e0d;
     }
-  #newsletter {
-      background: #4b1e0d;
-    }
-    
-    
-  
-    
-
-
-
   </style>
 </head>
 <body>
@@ -168,14 +149,14 @@
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
           <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
-           <li class="nav-item"><a class="nav-link active" href="faq.html">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link active" href="faq.html">FAQ</a></li>
           <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Banner with Image -->
+  <!-- Banner -->
   <section class="contact-header">
     <img src="images/Birthday Parties.avif" alt="Contact Banner">
     <div class="banner-text">
@@ -189,30 +170,44 @@
       <div class="row g-5">
         <!-- Contact Info -->
         <div class="col-md-5">
-          <h2 class="fw-bold mb-4"style="color:#4b1e0d;">Get in Touch</h2>
+          <h2 class="fw-bold mb-4" style="color:#4b1e0d;">Get in Touch</h2>
           <p class="mb-3 contact-info"><i class="bi bi-geo-alt-fill"></i> Pune, Maharashtra, India</p>
           <p class="mb-3 contact-info"><i class="bi bi-telephone-fill"></i> +91 9876543210</p>
           <p class="mb-3 contact-info"><i class="bi bi-envelope-fill"></i> contact@eventhub.com</p>
           <p class="mb-3 contact-info"><i class="bi bi-clock-fill"></i> Mon - Sat: 9:00 AM - 7:00 PM</p>
-          <div class="social-icons mt-3">
-            <a href="#"><i class="bi bi-facebook"></i></a>
-            <a href="#"><i class="bi bi-instagram"></i></a>
-            <a href="#"><i class="bi bi-twitter"></i></a>
-            <a href="#"><i class="bi bi-linkedin"></i></a>
-          </div>
         </div>
+
         <!-- Contact Form -->
         <div class="col-md-7">
-          <h2 class="fw-bold mb-4"style="color:#4b1e0d;">Send Us a Message</h2>
+          <h2 class="fw-bold mb-4" style="color:#4b1e0d;">Send Us a Message</h2>
           <form>
-            <div class="mb-3">
-              <label class="form-label">Name</label>
-              <input type="text" class="form-control" placeholder="Enter your name" required>
+            <!-- Name + Email -->
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label class="form-label">Name</label>
+                <input type="text" class="form-control" placeholder="Enter your name" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" placeholder="Enter your email" required>
+              </div>
             </div>
-            <div class="mb-3">
-              <label class="form-label">Email</label>
-              <input type="email" class="form-control" placeholder="Enter your email" required>
+            <!-- Date + Time + Contact Number -->
+            <div class="row">
+              <div class="col-md-4 mb-3">
+                <label class="form-label">Preferred Date</label>
+                <input type="date" class="form-control" required>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label class="form-label">Preferred Time</label>
+                <input type="time" class="form-control" required>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label class="form-label">Contact Number</label>
+                <input type="tel" class="form-control" placeholder="+91 XXXXX XXXXX" required>
+              </div>
             </div>
+            <!-- Message -->
             <div class="mb-3">
               <label class="form-label">Message</label>
               <textarea class="form-control" rows="5" placeholder="Type your message" required></textarea>
@@ -224,35 +219,31 @@
     </div>
   </section>
 
-  <hr style="border: 4px solid  #4b1e0d; margin: 40px 0;">
+  <hr style="border: 4px solid #4b1e0d; margin: 40px 0;">
 
-
-<!-- Map + Image Section -->
-<section class="py-5" style="background-color:#fdf3e7;">
-  <div class="container">
-    <div class="row g-4 align-items-stretch">
-      <!-- Google Map -->
-      <div class="col-md-6 map-section animate-element">
-        <h3 class="fw-bold mb-3" style="color:#4b1e0d;">Find Us Here</h3>
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.5941437392783!2d73.85674357496267!3d18.52043017129962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c06a5c6a3cfd%3A0x6ed3a5c3a1f97dd5!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1694200000000!5m2!1sen!2sin" 
-          class="w-100 h-100 rounded shadow" style="border:0;" allowfullscreen="" loading="lazy">
-        </iframe>
-      </div>
-      <!-- Contact Image -->
-      <div class="col-md-6 animate-element">
-        <h3 class="fw-bold mb-3" style="color:#4b1e0d;">Connect with us our office.!</h3>
-        <img src="images/work place.jpg" alt="EventHub Office" class="img-fluid rounded shadow w-100 h-100 object-fit-cover contact-img">
+  <!-- Map + Image -->
+  <section class="py-5" style="background-color:#fdf3e7;">
+    <div class="container">
+      <div class="row g-4 align-items-stretch">
+        <!-- Google Map -->
+        <div class="col-md-6 map-section animate-element">
+          <h3 class="fw-bold mb-3" style="color:#4b1e0d;">Find Us Here</h3>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.5941437392783!2d73.85674357496267!3d18.52043017129962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c06a5c6a3cfd%3A0x6ed3a5c3a1f97dd5!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1694200000000!5m2!1sen!2sin" 
+            class="w-100 h-100 rounded shadow" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <!-- Office Image -->
+        <div class="col-md-6 animate-element">
+          <h3 class="fw-bold mb-3" style="color:#4b1e0d;">Connect with our Office</h3>
+          <img src="images/work place.jpg" alt="EventHub Office" class="img-fluid rounded shadow w-100 h-100 object-fit-cover contact-img">
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-  <!-- Newsletter Section -->
+  <!-- Newsletter -->
   <section id="newsletter" class="py-5 text-center text-white">
     <div class="container">
-      <h3 class="fw-bold" >Stay Connected with EventHub</h3>
+      <h3 class="fw-bold">Stay Connected with EventHub</h3>
       <p class="mb-4">Subscribe to our newsletter and get the latest updates & offers.</p>
       <form class="row justify-content-center">
         <div class="col-md-6 col-sm-8">
@@ -265,7 +256,6 @@
     </div>
   </section>
 
-   
   <!-- Footer -->
   <footer>
     <div class="container">
@@ -304,17 +294,16 @@
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-// Scroll Animation
-const elements = document.querySelectorAll('.animate-element');
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add('visible');
-    }
-  });
-}, { threshold: 0.1 });
-
-elements.forEach(el => observer.observe(el));
-</script>
+  // Scroll Animation
+  const elements = document.querySelectorAll('.animate-element');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+  elements.forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
