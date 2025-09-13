@@ -301,8 +301,27 @@
     footer a:hover {
       color: #ffcc00;
     }
+
+    .social-icons a {
+      font-size: 1.2rem;
+      display: inline-block;
+      margin-right: 10px;
+      color: #fff;
+      border: 1px solid #fff;
+      padding: 8px 10px;
+      border-radius: 50%;
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      background: #ffcc00;
+      color: #4b1e0d;
+      border-color: #ffcc00;
+    }
+    
   </style>
 </head>
+
 
 <body>
   <!-- Navbar -->
@@ -319,9 +338,9 @@
 
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
           <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
           <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
@@ -337,45 +356,89 @@
   </section>
 
   <!-- Services Grid -->
-  <section class="container py-5">
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="service-card">
-          <img src="images/Bride back image1.jpeg" alt="Wedding">
-          <div class="service-card-body">
-            <i class="fa-solid fa-ring service-icon"></i>
-            <h3>Wedding Planning</h3>
-            <p>From décor to coordination, we make your wedding magical.</p>
-            <a href="contact.html" class="btn">Book Now</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="service-card">
-          <img src="images/c.22.jpg" alt="Corporate">
-          <div class="service-card-body">
-            <i class="fa-solid fa-briefcase service-icon"></i>
-            <h3>Corporate Events</h3>
-            <p>Professional events that build your brand and impress your clients.</p>
-            <a href="contact.html" class="btn">Book Now</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="service-card">
-          <img src="images/bday1.jpg" alt="Birthday">
-          <div class="service-card-body">
-            <i class="fa-solid fa-cake-candles service-icon"></i>
-            <h3>Birthday Parties</h3>
-            <p>Creative and personalized birthday celebrations for all ages.</p>
-            <a href="contact.html" class="btn">Book Now</a>
-          </div>
+<section class="container py-5">
+  <div class="row g-4">
+
+    <!-- Service 1 -->
+    <div class="col-md-4">
+      <div class="service-card">
+        <img src="images/Bride back image1.jpeg" alt="Wedding">
+        <div class="service-card-body">
+          <i class="fa-solid fa-ring service-icon"></i>
+          <h3>Wedding Planning</h3>
+          <p>From décor to coordination, we make your wedding magical.</p>
+          <a href="contact.html" class="btn">Book Now</a>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- Upcoming Offers Section -->
+    <!-- Service 2 -->
+    <div class="col-md-4">
+      <div class="service-card">
+        <img src="images/c.22.jpg" alt="Corporate">
+        <div class="service-card-body">
+          <i class="fa-solid fa-briefcase service-icon"></i>
+          <h3>Corporate Events</h3>
+          <p>Professional events that build your brand and impress your clients.</p>
+          <a href="contact.html" class="btn">Book Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service 3 -->
+    <div class="col-md-4">
+      <div class="service-card">
+        <img src="images/bday1.jpg" alt="Birthday">
+        <div class="service-card-body">
+          <i class="fa-solid fa-cake-candles service-icon"></i>
+          <h3>Birthday Parties</h3>
+          <p>Creative and personalized birthday celebrations for all ages.</p>
+          <a href="contact.html" class="btn">Book Now</a>
+        </div>
+      </div>
+    </div>
+
+     <!-- Service 4 -->
+<div class="col-md-4">
+  <div class="service-card">
+    <img src="images/baby-shower-grand-decoration-500x500.webp" alt="Baby Shower">
+    <div class="service-card-body">
+      <i class="fa-solid fa-baby-carriage service-icon"></i>
+      <h3>Baby Shower</h3>
+      <p>Heartwarming and memorable baby shower celebrations for your loved ones.</p>
+      <a href="contact.html" class="btn">Book Now</a>
+    </div>
+  </div>
+</div>
+
+<!-- Service 5 -->
+<div class="col-md-4">
+  <div class="service-card">
+    <img src="images/anni1.jpg" alt="Anniversary">
+    <div class="service-card-body">
+      <i class="fa-solid fa-heart service-icon"></i>
+      <h3>Anniversary Celebration</h3>
+      <p>Romantic and memorable celebrations to mark your special day.</p>
+      <a href="contact.html" class="btn">Book Now</a>
+    </div>
+  </div>
+</div>
+
+<!-- Service 6 -->
+<div class="col-md-4">
+  <div class="service-card">
+    <img src="images/haldi.jpg" alt="Haldi ceremony">
+    <div class="service-card-body">
+      <i class="fa-solid fa-leaf service-icon"></i>
+      <h3>Haldi Bliss Décor</h3>
+      <p>Vibrant and traditional decorations to make your Haldi ceremony unforgettable.</p>
+      <a href="contact.html" class="btn">Book Now</a>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Upcoming Offers Section -->
   <section class="offers-section">
     <div class="container">
       <h2>🔥 Upcoming Offers</h2>
@@ -487,6 +550,7 @@
       </div>
     </div>
   </footer>
+
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
