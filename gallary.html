@@ -418,56 +418,11 @@
   font-family: 'Arial', sans-serif;
 }
 
-.stats-section {
-      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url(images/state\ baground.jpg) center/cover no-repeat;
-      color: #fff;
-      padding: 80px 0;
-      text-align: center;
-    }
-    .stat h3 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: #f8c94e;
-    }
 
-.overlay {
-  background-color: rgba(0, 0, 0, 0.6); /* dark overlay for readability */
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 
-.stats-title {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  letter-spacing: 2px;
-}
 
-.stats-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
-}
 
-.stat-item {
-  flex: 1;
-  min-width: 150px;
-}
 
-.stat-item h3 {
-  font-size: 3rem;
-  margin: 0;
-}
-
-.stat-item p {
-  margin-top: 10px;
-  font-size: 1rem;
-  letter-spacing: 1px;
-}
 html {
   scroll-behavior: smooth;
 }
@@ -515,7 +470,8 @@ html {
 
 <body>
 
-  <!-- Navigation Bar -->
+ 
+ <!-- Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top ">
 
   <div class="container">
@@ -531,10 +487,11 @@ html {
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link  active" href="#about">About Us</a></li>
+       <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+
         <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
         <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
-        <li class="nav-item"><a class="nav-link" href="gallary.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link active" href="gallary.html">Gallery</a></li>
         <li class="nav-item"><a class="nav-link"  href="faq.html">FAQ</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
@@ -545,228 +502,156 @@ html {
 
 
 
+
   <!-- Background image text Section -->
   <section class="image ">
     <div class="container">
-      <h1>We Make Your Events Memorable</h1>
+      <h1>Our Gallary</h1>
       <p>Wedding • Corporate • Birthday • Concerts • Festivals</p>
-      <!-- Button updated to link to #gallery -->
-      <a href="gallary.html" class="btn btn-warning btn-lg mt-3">Explore Gallery</a>
-    </div>
+     </div>
   </section>
 
 
 
-<!--About info-->
-<section id="about">
-  
-  <div class="container-fluid py-5 cla">
-  <div class="row align-items-center">
-  <!-- Right Text Content -->
-    <div class="col-md-12">
-      <div class="card border-0  shadow-sm bg-light">
-        <div class="about-intro fromright animated fadeInRight p-4">
-          <h2 class="about-heading fw-bold mb-4">About Us</h2>
-          
-          <p class="about-subtext mb-3">
-            <strong>EventHub</strong> is a reputed event management agency based in Pune. Recognized among the 
-            <span><strong>top event planners in India</strong></span>, we specialize 
-            in organizing exceptional and tailor-made celebrations.
-          </p>
-
-          <p class="mb-3">
-            Our portfolio includes <strong>wedding planning</strong>, <strong>birthday parties</strong>, 
-            <strong>corporate events</strong>, <strong>destination weddings</strong>, rental services, and more. 
-            We are your one-stop destination for all kinds of events and celebrations.
-          </p>
-
-          <p class="mb-0">
-            With a team of trained, creative, and passionate professionals, Décor Destinations brings your vision to life 
-            through innovation, precision, and a personal touch. Every event is an opportunity to create lasting memories.
-          </p>
+ 
+<!-- Gallery Section -->
+  <section class="container mt-5">
+    
+    <h1 class="about-heading fw-bold mb-4 p-3";>Corporate Event</h1>
+    <div class="row">
+      <!-- Corporate Event -->
+      <div class="col-md-4">
+        <div class="card event-card">
+          <img src="images/c22.jpg" class="card-img-top event-img" alt="Corporate Event">
+          <div class="card-body">A stylish tent with elegant decor, ideal for upscale corporate gatherings.
+          </div>
         </div>
       </div>
-    </div>
-
-  </div>
-</div>
-</section>
-<!---->
-  <section class="py-4" style="background-color: #d2a679">
-    <div class="container animated-text">
-      <em>
-        <h3 class="text-center fw-bold mb-4 zoom-pulse" style="color: #4b1e0d" ; class="animated-text">We promise to
-          envelope your personal moments in a thread tied with love, togetherness and treasured moments.</h3>
-
-      </em>
-    </div>
-
-  </section>
-  
-<!-- our SERVICES-->
-<section id="our-services">
-  <h2>OUR CORE SERVICES</h2>
-  <p>Thoughtful and professional events can take you to so many good places in life.</p>
-  
-
-  <div class="services-slider">
-    <div class="service-box">
-      <img src="images/—Pngtree—realistic serene candlelit wedding stage_16349228.jpeg" alt="Eventful Family">
-      <h3 style="color:red;">THE EVENTFUL FAMILY</h3>
-      <p>Birthdays<br>Anniversary party<br>Baby Naming ceremony</p>
-    </div>
-
-    <div class="service-box">
-      <img src="images/wedding-reception-event-services.jpg" alt="Wedding Love">
-      <h3 style="color:red;">WEDDING LOVE</h3>
-      <p>Wedding Planners<br>Stage Decoration<br>Destination wedding</p>
-    </div>
-
-    <div class="service-box">
-      <img src="images/celibr.jpg" alt="Celebrity Overwhelm">
-      <h3 style="color:red;">CELEBRITY OVERWHELM</h3>
-      <p>Celebrity MCs<br>Live bands<br>Motivational speakers</p>
-    </div>
-
-    <div class="service-box">
-      <img src="images/corporate.avif" alt="Corporate Colours">
-      <h3 style="color:red;">CORPORATE COLOURS</h3>
-      <p>Client Appreciation<br>Award Dinners<br>Employee Appreciation</p>
-
       
-    </div>
-
-    
-    <div class="service-box">
-      <img src="images/slid4.jpg" alt="Corporate Colours">
-      <h3 style="color:red;">THE SPECIALIEST</h3>
-      <p>Brand Advertising<br>Press Meets<br>LED wall</p>
-
-      
-    </div>
-    
-    <div class="service-box">
-      <img src="images/slid 5.webp" alt="Corporate Colours">
-      <h3 style="color:red;">PERSONAL OCCASIONS</h3>
-      <p>Birthday Party<br>Graduation Party<br>Anniversary Party</p>
-
-      
-    </div>
-    
-    <div class="service-box">
-      <img src="images/slid6.jpg" alt="Corporate Colours">
-      <h3 style="color:red;">SPECIAL EVENTS</h3>
-      <p>Media Attention<br>Public awareness<br>Live shows</p>
-
-      
-    </div>
-    
-    <div class="service-box">
-      <img src="images/slide 7.jpg" alt="Corporate Colours">
-      <h3 style="color:red;">EDUCATIONAL EVENTS</h3>
-      <p>Anniversary functions<br>College culturals<br>Graduation day
-
-</p>
-
-      
-    </div>
-  </div>
-</section>
-
-<section class="py-2" style="background-color: #d2a679">
-    <div class="container">
-      <em>
-        <h5 class="text-center fw-bold mb-4 text-box" style="color: #4b1e0d" ; class="animated-text">Create everlasting
-          moments by booking
-          best wedding planners for your perfect day!</h5>
-
-
-      </em>
-    </div>
-
-  </section>
-<!-- Our Team Section -->
-<section class="py-5" style="background-color: #fdf3e7;">
-  <div class="container text-center">
-    <h2 class="fw-bold mb-5 animate__animated animate__fadeInDown" style="color: #4b1e0d;">Meet Our Team</h2>
-    <div class="row justify-content-center">
-
-      <!-- Team Member 1 -->
-      <div class="col-md-4 mb-4">
-        <div class="card team-card animate__animated animate__fadeInUp animate__delay-0_5s">
-          <img src="images/atharv deshmukh.jpg" class="card-img-top hover-image rounded-circle team-img" alt="Team Member 1">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Aarav Deshmukh</h5>
-            <p class="card-text">Founder & Creative Director</p>
+     
+      <div class="col-md-4">
+        <div class="card event-card">
+          <img src="images/c66.jpg" class="card-img-top event-img" alt="Wedding Event">
+          <div class="card-body"> A grand ballroom featuring dramatic lighting for luxurious corporate events.
           </div>
         </div>
       </div>
 
-      <!-- Team Member 2 -->
-      <div class="col-md-4 mb-4">
-        <div class="card team-card animate__animated animate__fadeInUp animate__delay-1s">
-          <img src="images/Mira-Rajput-1.jpg" class="card-img-top hover-image rounded-circle team-img" alt="Team Member 2">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Meera Kapoor</h5>
-            <p class="card-text">Event Manager</p>
+      
+
+     
+      <div class="col-md-4">
+        <div class="card event-card">
+          <img src="images/audience-1853662_640.jpg" class="card-img-top event-img" alt="Birthday Party">
+          <div class="card-body">An energetic event with vibrant lights, perfect for large-scale corporate celebrations.
+          </div>
+        </div>
+      </div>
+     </section>
+
+
+      <!-- Gallery Section -->
+  <section class="container mt-5">
+    
+    <h1 class="about-heading fw-bold mb-4 p-3";>Wedding Planning</h1>
+    <div class="row">
+      <!-- WEdding palning -->
+      <div class="col-md-4">
+        <div class="card event-card">
+          <img src="images/wed img1.jpg" class="card-img-top event-img" alt="Corporate Event">
+          <div class="card-body">An elegant outdoor dining setup with floral drapes and sophisticated decor for a memorable wedding.
+          </div>
+        </div>
+      </div>
+      
+     
+      <div class="col-md-4">
+        <div class="card event-card">
+          <img src="images/event 2.webp" class="card-img-top event-img" alt="Wedding Event">
+          <div class="card-body">A picturesque beach wedding with a beautifully decorated floral arch and serene ambiance.
           </div>
         </div>
       </div>
 
-      <!-- Team Member 3 -->
-      <div class="col-md-4 mb-4">
-        <div class="card team-card animate__animated animate__fadeInUp animate__delay-1_5s">
-          <img src="images/GLT-Headshot_Rahul-Singh.jpg" class="card-img-top hover-image rounded-circle team-img" alt="Team Member 3">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Rahul Singh</h5>
-            <p class="card-text">Logistics Head</p>
+      
+
+     
+      <div class="col-md-4">
+        <div class="card event-card">
+          <img src="images/—Pngtree—realistic serene candlelit wedding stage_16349228.jpeg" class="card-img-top event-img" alt="Birthday Party">
+          <div class="card-body">A luxurious indoor wedding venue with stunning floral arrangements and soft, romantic lighting.
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <!-- birthaday Gallery Section -->
+  <section class="container mt-5">
+    
+    <h1 class="about-heading fw-bold mb-4 p-3";>Birthday parties</h1>
+    <div class="row">
+      <!-- Birthday parties -->
+      <div class="col-md-4">
+        <div class="card event-card">
+          <img src="images/bday1.jpg" class="card-img-top event-img" alt="Corporate Event">
+          <div class="card-body">A beautifully decorated birthday setup with elegant balloon arrangements and a cake table, ideal for an intimate celebration.
+          </div>
+        </div>
+      </div>
+      
+     
+      <div class="col-md-4">
+        <div class="card event-card">
+          <img src="images/bday33.webp" class="card-img-top event-img" alt="Wedding Event">
+          <div class="card-body">A vibrant balloon arch and chic seating, offering a fun and creative atmosphere for a memorable birthday event.
           </div>
         </div>
       </div>
 
-    </div>
-  </div>
-</section>
+      
+
+     
+      <div class="col-md-4">
+        <div class="card event-card">
+          <img src="images/bday7.webp" class="card-img-top event-img" alt="Birthday Party">
+          <div class="card-body">
+      A stylish outdoor setup with gold-themed decor and sophisticated touches, perfect for a luxury birthday celebration.
+          </div>
+        </div>
+      </div>
+    </section>
+
+ <!-- Gallery Section -->
+  <section class="container mt-5">
+    
+    <h1 class="about-heading fw-bold mb-4 p-3";>Baby showers</h1>
+    <div class="row">
+      <!-- Baby Shower -->
+      <div class="col-md-4">
+        <div class="card event-card">
+          <img src="images/baby2.jpg" class="card-img-top event-img" alt="Baby Shower">
+          <div class="card-body">A beautiful baby shower setup with flowers, creating a warm and welcoming vibe.
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card event-card">
+          <img src="images/baby-shower-grand-decoration-500x500.webp" class="card-img-top event-img" alt="Baby Shower">
+          <div class="card-body"> fun and colorful baby shower with a balloon arch, perfect for a joyful celebration.
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card event-card">
+          <img src="images/bday11.webp" class="card-img-top event-img" alt="Baby Shower">
+          <div class="card-body">A classy baby shower with flowers and balloons, offering a stylish and elegant atmosphere.
+          </div>
+        </div>
+      </div>
+    </div>  
+    </section>
 
 
-  <!--  add a link to a font-awesome or similar icon library -->
-  
-
-  <section class="why-choose-us">
-    <h2>Why Choose Us?</h2>
-    <p class="subtitle">Delivering unforgettable events with passion and precision.</p>
-    <div class="features">
-      <div class="feature-box">
-        <div class="feature-icon "><i class="fas fa-calendar-check"></i></div>
-        <div class="feature-title">Experienced Team</div>
-        <div class="feature-desc">
-          Our experts bring years of event management experience ensuring every detail is perfect.
-        </div>
-      </div>
-      <div class="feature-box">
-        <div class="feature-icon"><i class="fas fa-handshake"></i></div>
-        <div class="feature-title">Client-Centric Approach</div>
-        <div class="feature-desc">
-          We prioritize your vision and needs to create customized and memorable events.
-        </div>
-      </div>
-      <div class="feature-box">
-        <div class="feature-icon"><i class="fas fa-star"></i></div>
-        <div class="feature-title">Quality & Excellence</div>
-        <div class="feature-desc">
-          We ensure top-notch services, vendors, and flawless execution for every event.
-        </div>
-      </div>
-      <div class="feature-box">
-        <div class="feature-icon"><i class="fas fa-bolt"></i></div>
-        <div class="feature-title">Quick & Reliable</div>
-        <div class="feature-desc">
-          Timely responses and seamless coordination to keep your event stress-free.
-        </div>
-      </div>
-    </div>
-    <a href="contact.html" class="btn btn-warning btn-lg mt-3">Book Your Event</a>
-  </section>
 
 
 
