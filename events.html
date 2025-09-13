@@ -59,8 +59,11 @@
       align-items: center;
       justify-content: center;
       text-align: center;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
     }
-
+  
     .image h1 {
       font-size: 3rem;
       font-weight: bold;
@@ -108,6 +111,10 @@ footer {
 
     footer a:hover {
       color: #ffcc00;
+    }
+    /* Newsletter */
+    #newsletter {
+      background: #4b1e0d;
     }
 
 
@@ -166,19 +173,7 @@ footer {
       animation: pulse 0.8s ease-in-out;
     }
 
-   /* @keyframes pulse {
-      0% {
-        transform: scale(1);
-      }
-
-      50% {
-        transform: scale(1.1);
-      }
-
-      100% {
-        transform: scale(1);
-      }
-    }*/
+   
 
     .card {
       transition: transform 0.6s ease, box-shadow 0.6s ease;
@@ -206,25 +201,7 @@ footer {
       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
 
-    .modal-title {
-      color: white;
-    }
-
-    span {
-      color: brown;
-    }
-    .btn-outline-light{
-             background-color:#f7eccb;
-             color: black;
-             border-color: black;
-      
-    }
-
-    .btn-outline-light:hover {
-      background-color:#3a2701;
-      color:white ;
     
-    }
     /*Navbar*/
     .navbar{
       background-color: #4b1e0d !important ;
@@ -236,7 +213,7 @@ footer {
       background-color:#f7eccb ;
     }
 
-  
+  /*Slider*/
 .swiper {
   width: 100%;
   padding: 5px 0;
@@ -310,9 +287,9 @@ h6{
   <!-- Background image text Section -->
   <section class="image">
     <div class="container">
-       <h1>We Make Your Events Memorable</h1>
-      <p>Wedding • Corporate • Birthday • Concerts • Festivals</p>
-      <a href="services.html" class="btn btn-warning btn-lg mt-3">VANUES</a>
+       <h1 >We Make Your Events Memorable</h1>
+      <p >Wedding • Corporate • Birthday • Concerts • Festivals</p>
+      <a href="services.html" class="btn btn-warning btn-lg mt-3">Services</a>
      
     </div>
   </section>
@@ -583,11 +560,25 @@ h6{
     </div>
   </div>
 </section>
-
-
     <!--baby shower end-->
 
-    
+    <!-- Newsletter Section -->
+  <section id="newsletter" class="py-5 text-center text-white mt-5 mb-2g">
+    <div class="container">
+      <h3 class="fw-bold">Stay Connected with EventHub</h3>
+      <p class="mb-4">Subscribe to our newsletter and get the latest updates & offers.</p>
+      <form class="row justify-content-center">
+        <div class="col-md-6 col-sm-8">
+          <div class="input-group">
+            <input type="email" class="form-control rounded-start" placeholder="Enter your email" required>
+            <button class="btn btn-warning rounded-end">Subscribe</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+    <!--Footer-->
 <footer>
     <div class="container">
       <div class="row">
@@ -660,6 +651,6 @@ var swiper = new Swiper(".mySwiper", {
 </html>
 
 
-</body>
+<!--</body>
 
-</html>
+</html>-->
