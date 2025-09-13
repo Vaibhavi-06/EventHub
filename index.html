@@ -7,12 +7,11 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #fdf3e7;
-      margin: 0;
-      padding: 0;
     }
 
     /* Navbar */
@@ -20,7 +19,16 @@
       background-color: #4b1e0d !important;
     }
     .navbar-brand img {
-      border-radius: 5px;
+      border-radius: 50%; /* fully rounded */
+      border: 2px solid #fff; /* white border */
+    }
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #fff !important;
+    }
+     .navbar {
+      background-color: #4b1e0d !important;
     }
     .navbar-brand {
       font-weight: bold;
@@ -28,109 +36,107 @@
       color: #fff !important;
     }
 
-    /* Slider */
+    /* Banner Slider */
     .carousel-item {
-      height: 85vh;
+      height: 90vh;
       min-height: 400px;
-      background: no-repeat center center scroll;
       background-size: cover;
+      background-position: center;
       position: relative;
     }
-
-    .carousel-caption {
-      bottom: 25%;
+    .carousel-item::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.55);
     }
-
+    .carousel-caption {
+      bottom: 30%;
+      z-index: 2;
+    }
     .carousel-caption h1 {
-      font-size: 3rem;
+      font-size: 3.2rem;
       font-weight: bold;
-      color: #ffffff; /* White text */
+      color: #ffcc00;
       text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
     }
-
     .carousel-caption p {
       font-size: 1.2rem;
-      color: #f0f0f0; /* Light gray text */
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
+      color: #f0f0f0;
+      margin-bottom: 20px;
+    }
+    .carousel-caption .btn {
+      padding: 12px 28px;
+      font-size: 1.1rem;
+      border-radius: 30px;
+      transition: 0.3s;
+    }
+    .carousel-caption .btn:hover {
+      transform: scale(1.05);
     }
 
-    /* About & Services Section */
-    #about, #services {
-      padding: 60px 0;
-      background: #fff;
-      color: #333;
-    }
-    #about h2, #services h2 {
-      color: #4b1e0d;
-      margin-bottom: 20px;
+    /* Section Headings */
+    section h2 {
       font-weight: bold;
       text-align: center;
+      margin-bottom: 40px;
+      color: #4b1e0d;
     }
+
+    /* About Section */
     .about-img {
       width: 100%;
-      height: 300px;
+      height: 320px;
       object-fit: cover;
-      border-radius: 10px;
+      border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
 
-    /* Service Cards */
+    /* Services */
     .service-card {
       background: #fff;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       overflow: hidden;
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: 0.3s;
     }
     .service-card img {
-      width: 100%;
-      height: 200px;
+      height: 220px;
       object-fit: cover;
-      transition: transform 0.4s ease;
+      width: 100%;
     }
     .service-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
-    }
-    .service-card:hover img {
-      transform: scale(1.05);
-    }
-    .service-card h5 {
-      margin-top: 15px;
-      font-weight: bold;
-      color: #4b1e0d;
-    }
-    .service-card p {
-      color: #555;
-      font-size: 0.95rem;
-    }
-    .service-card .btn-outline-dark {
-      transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-    }
-    .service-card .btn-outline-dark:hover {
-      background-color: #4b1e0d;
-      color: #fff;
-      transform: translateY(-3px);
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.2);
     }
 
-    /* CTA Section */
+    /* CTA */
     .cta-section {
-      background: linear-gradient(rgba(75, 30, 13, 0.85), rgba(75, 30, 13, 0.85)), url('images/event background1.jpg') no-repeat center center/cover;
+      background: linear-gradient(rgba(75,30,13,0.85), rgba(75,30,13,0.85)),
+                  url('images/event background1.jpg') no-repeat center/cover;
       color: #fff;
     }
     .cta-section h3 {
       color: #ffcc00;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
 
     /* Features */
-    #features h2 {
-      color: #4b1e0d;
+    #features .bi {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
     }
 
     /* Testimonials */
-    #testimonials {
+    .testimonial {
       background: #fff;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+    .testimonial:hover {
+      transform: translateY(-5px);
     }
 
     /* Newsletter */
@@ -141,30 +147,31 @@
     /* Footer */
     footer {
       background: #2c1b0e;
-      color: #fff;
-      padding: 40px 0 20px 0;
+      color: #ddd;
+      padding-top: 40px;
+      padding-bottom: 20px;
     }
     footer h5 {
       color: #ffcc00;
       margin-bottom: 15px;
     }
     footer a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 5px;
+      color: #ddd;
       transition: 0.3s;
+      text-decoration: none;
     }
     footer a:hover {
       color: #ffcc00;
     }
     .social-icons a {
-      font-size: 1.2rem;
       display: inline-block;
-      margin-right: 10px;
-      color: #fff;
+      width: 38px; height: 38px;
+      line-height: 38px;
+      text-align: center;
       border: 1px solid #fff;
-      padding: 8px 10px;
       border-radius: 50%;
+      margin-right: 8px;
+      color: #fff;
       transition: 0.3s;
     }
     .social-icons a:hover {
@@ -172,15 +179,6 @@
       color: #4b1e0d;
       border-color: #ffcc00;
     }
-    .image {
-    background: url("images/state\ baground.jpg") center/cover no-repeat;
-    padding: 100px 0;
-    text-align: center;
-    color: white;
-    position: relative;
-    overflow: hidden;
-    
-  }
   </style>
 </head>
 <body>
@@ -188,7 +186,7 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark shadow fixed-top">
     <div class="container">
-      <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
         <img src="images/logo png.jpg" alt="EventHub Logo" width="40" height="40" class="me-2">
         EventHub
       </a>
@@ -198,10 +196,10 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
           <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
-          <li class="nav-item"><a class="nav-link " href="gallary.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
           <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
@@ -212,95 +210,97 @@
   <!-- Banner Slider -->
   <div id="bannerCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
-
-      <!-- Slide 1 -->
       <div class="carousel-item active">
-        <img src="images/event background1.jpg" class="d-block w-100" alt="EventHub Banner 1">
-        <div class="carousel-caption d-flex flex-column justify-content-center h-100">
-          <h1 class="fw-bold">Welcome to EventHub</h1>
+        <img src="images/state baground.jpg" class="d-block w-100" alt="Elegant Event Setup">
+        <div class="carousel-caption">
+          <h1>Welcome to EventHub</h1>
           <p>Crafting unforgettable weddings, parties, and corporate events</p>
-          <a href="events.html" class="btn btn-warning btn-lg">Explore Events</a>
+          <a href="events.html" class="btn btn-warning">Explore Events</a>
         </div>
       </div>
-
-      <!-- Slide 2 -->
       <div class="carousel-item">
-        <img src="images/wedding planning.avif" class="d-block w-100" alt="Wedding Banner">
-        <div class="carousel-caption d-flex flex-column justify-content-center h-100">
-          <h1 class="fw-bold">Make Your Day Special</h1>
+        <img src="images/wedding planning.avif" class="d-block w-100" alt="Wedding Celebration">
+        <div class="carousel-caption">
+          <h1>Make Your Day Special</h1>
           <p>We design and manage every detail so you can enjoy the moments</p>
-          <a href="contact.html" class="btn btn-light btn-lg">Get Started</a>
+          <a href="contact.html" class="btn btn-warning">Get Started</a>
         </div>
       </div>
-
-      <!-- Slide 3 -->
       <div class="carousel-item">
-        <img src="images/corporate.avif" class="d-block w-100" alt="Corporate Banner">
-        <div class="carousel-caption d-flex flex-column justify-content-center h-100">
-          <h1 class="fw-bold">Corporate Excellence</h1>
+        <img src="images/corporate.avif" class="d-block w-100" alt="Corporate Event">
+        <div class="carousel-caption">
+          <h1>Corporate Excellence</h1>
           <p>Professional event solutions tailored for your business</p>
-          <a href="services.html" class="btn btn-warning btn-lg">Discover More</a>
+          <a href="services.html" class="btn btn-warning">Discover More</a>
         </div>
       </div>
-<!-- Background image text Section -->
-  <section class="image ">
-    <div class="container">
-      <h1>We Make Your Events Memorable</h1>
-      <p>Wedding • Corporate • Birthday • Concerts • Festivals</p>
-      <!-- Button updated to link to #gallery -->
-      <a href="gallary.html" class="btn btn-warning btn-lg mt-3">Explore Event</a>
     </div>
-  </section>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="2"></button>
+    </div>
+  </div>
 
   <!-- About Section -->
-  <section id="about">
+  <section id="about" class="py-5">
     <div class="container">
-      <div class="row align-items-center">
+      <div class="row align-items-center g-4">
         <div class="col-md-6">
-          <img src="images/wed6.6.jpg" class="about-img" alt="Wedding Celebration">
+          <img src="images/wed6.6.jpg" class="about-img" alt="Wedding Decor">
         </div>
         <div class="col-md-6">
           <h2>Who We Are</h2>
           <p>
             At <strong>EventHub</strong>, we make your celebrations unforgettable. From weddings and corporate events to birthdays,
-            our team plans every detail with care, creativity, and passion. We ensure each moment is memorable and perfectly crafted for you.
+            our team plans every detail with care, creativity, and passion.
           </p>
-          <a href="about.html" class="btn btn-dark mt-2">Learn More <i class="bi bi-arrow-right-circle"></i></a>
+          <a href="about.html" class="btn btn-dark">Learn More <i class="bi bi-arrow-right-circle"></i></a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Services Section -->
-  <section id="services">
-    <div class="container py-5">
+  <section id="services" class="py-5 bg-light">
+    <div class="container">
       <h2>Our Services</h2>
       <div class="row g-4">
         <div class="col-md-4">
-          <div class="service-card p-3 shadow">
-            <img src="images/wedding planning.avif" alt="Wedding Planning">
-            <div class="card-body text-center">
-              <h5 class="fw-bold">Wedding Planning</h5>
+          <div class="service-card text-center">
+            <img src="images/wedding planning.avif" alt="Wedding Planning Service">
+            <div class="p-3">
+              <h5>Wedding Planning</h5>
               <p>Decor, logistics, and unforgettable celebrations.</p>
               <a href="services.html" class="btn btn-outline-dark">Read More</a>
             </div>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="service-card p-3 shadow">
-            <img src="images/corporate.avif" alt="Corporate Events">
-            <div class="card-body text-center">
-              <h5 class="fw-bold">Corporate Events</h5>
+          <div class="service-card text-center">
+            <img src="images/corporate.avif" alt="Corporate Event Service">
+            <div class="p-3">
+              <h5>Corporate Events</h5>
               <p>Professional event solutions for businesses.</p>
               <a href="services.html" class="btn btn-outline-dark">Read More</a>
             </div>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="service-card p-3 shadow">
-            <img src="images/Birthday Parties.avif" alt="Birthday Parties">
-            <div class="card-body text-center">
-              <h5 class="fw-bold">Birthday Parties</h5>
+          <div class="service-card text-center">
+            <img src="images/Birthday Parties.avif" alt="Birthday Party Service">
+            <div class="p-3">
+              <h5>Birthday Parties</h5>
               <p>Fun-filled themes and joyful moments.</p>
               <a href="services.html" class="btn btn-outline-dark">Read More</a>
             </div>
@@ -313,9 +313,9 @@
   <!-- CTA Section -->
   <section class="cta-section text-center py-5">
     <div class="container">
-      <h3 class="fw-bold mb-3">Plan Your Dream Event With Us</h3>
-      <p class="mb-4">From weddings to corporate events, we craft every detail to perfection.</p>
-      <a href="contact.html" class="btn btn-lg btn-light shadow rounded-pill">
+      <h3>Plan Your Dream Event With Us</h3>
+      <p>From weddings to corporate events, we craft every detail to perfection.</p>
+      <a href="contact.html" class="btn btn-light btn-lg shadow rounded-pill">
         <i class="bi bi-envelope-fill"></i> Get in Touch
       </a>
     </div>
@@ -324,64 +324,64 @@
   <!-- Features Section -->
   <section id="features" class="py-5 bg-light">
     <div class="container">
-      <h2 class="text-center fw-bold text-dark mb-5">Why Choose EventHub?</h2>
+      <h2>Why Choose EventHub?</h2>
       <div class="row g-4 text-center">
         <div class="col-md-3">
-          <i class="bi bi-people-fill text-success fs-1"></i>
-          <h5 class="mt-3">Experienced Team</h5>
-          <p>Our experts ensure every event is executed with precision and style.</p>
+          <i class="bi bi-people-fill text-success"></i>
+          <h5>Experienced Team</h5>
+          <p>Our experts ensure every event is executed with precision.</p>
         </div>
         <div class="col-md-3">
-          <i class="bi bi-gift-fill text-danger fs-1"></i>
-          <h5 class="mt-3">Creative Designs</h5>
-          <p>We bring fresh, innovative ideas to every celebration we plan.</p>
+          <i class="bi bi-gift-fill text-danger"></i>
+          <h5>Creative Designs</h5>
+          <p>We bring fresh, innovative ideas to every celebration.</p>
         </div>
         <div class="col-md-3">
-          <i class="bi bi-clock-history text-primary fs-1"></i>
-          <h5 class="mt-3">On-Time Delivery</h5>
-          <p>We value your time and deliver smooth, timely event execution.</p>
+          <i class="bi bi-clock-history text-primary"></i>
+          <h5>On-Time Delivery</h5>
+          <p>We value your time and ensure smooth event execution.</p>
         </div>
         <div class="col-md-3">
-          <i class="bi bi-heart-fill text-warning fs-1"></i>
-          <h5 class="mt-3">Customer Satisfaction</h5>
-          <p>Our clients’ happiness is our biggest achievement.</p>
+          <i class="bi bi-heart-fill text-warning"></i>
+          <h5>Customer Satisfaction</h5>
+          <p>Your happiness is our biggest achievement.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Testimonials Section -->
+  <!-- Testimonials -->
   <section id="testimonials" class="py-5">
     <div class="container">
-      <h2 class="text-center fw-bold text-dark mb-5">What Our Clients Say</h2>
+      <h2>What Our Clients Say</h2>
       <div class="row g-4">
         <div class="col-md-4">
-          <div class="p-4 bg-white shadow rounded text-center">
+          <div class="testimonial">
             <p>"EventHub made our wedding magical. Every detail was perfect!"</p>
-            <h6 class="fw-bold mt-3">- Priya & Rohan</h6>
+            <h6>- Priya & Rohan</h6>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="p-4 bg-white shadow rounded text-center">
+          <div class="testimonial">
             <p>"Their team organized our corporate gala seamlessly. Truly professional."</p>
-            <h6 class="fw-bold mt-3">- TechCorp Pvt. Ltd.</h6>
+            <h6>- TechCorp Pvt. Ltd.</h6>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="p-4 bg-white shadow rounded text-center">
+          <div class="testimonial">
             <p>"The birthday party theme was outstanding! My kids loved it."</p>
-            <h6 class="fw-bold mt-3">- Neha Sharma</h6>
+            <h6>- Neha Sharma</h6>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Newsletter Section -->
+  <!-- Newsletter -->
   <section id="newsletter" class="py-5 text-center text-white">
     <div class="container">
-      <h3 class="fw-bold">Stay Connected with EventHub</h3>
-      <p class="mb-4">Subscribe to our newsletter and get the latest updates & offers.</p>
+      <h3>Stay Connected with EventHub</h3>
+      <p>Subscribe to our newsletter and get the latest updates & offers.</p>
       <form class="row justify-content-center">
         <div class="col-md-6 col-sm-8">
           <div class="input-group">
@@ -404,7 +404,7 @@
         <div class="col-md-4 mb-3">
           <h5>Quick Links</h5>
           <ul class="list-unstyled">
-            <li><a href="#">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="events.html">Events</a></li>
